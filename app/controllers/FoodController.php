@@ -73,4 +73,14 @@ class FoodController extends BaseController {
 		
 		return Response::json(['destroy'=>true]);
 	}
+
+	public function getingredient($id)
+	{
+		return FoodingredientModel::find($id);
+	}
+	
+	public function getingredients()
+	{
+		return FoodingredientModel::all();
+	}
 }
