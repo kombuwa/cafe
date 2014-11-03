@@ -1,0 +1,20 @@
+[28-Sep-2014 08:45:40 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/cafeceyl/public_html/system/cafe/app/routes.php on line 23
+[29-Sep-2014 05:00:25 UTC] PHP Parse error:  syntax error, unexpected 'js' (T_STRING) in /home/cafeceyl/public_html/system/cafe/app/storage/views/7e5fc19716514ecac6994e8e63e2d6bc on line 76
+[29-Sep-2014 05:00:40 UTC] PHP Parse error:  syntax error, unexpected 'js' (T_STRING) in /home/cafeceyl/public_html/system/cafe/app/storage/views/7e5fc19716514ecac6994e8e63e2d6bc on line 76
+[29-Sep-2014 05:02:32 UTC] PHP Parse error:  syntax error, unexpected 'js' (T_STRING) in /home/cafeceyl/public_html/system/cafe/app/storage/views/7e5fc19716514ecac6994e8e63e2d6bc on line 76
+[29-Sep-2014 05:09:09 UTC] PHP Parse error:  syntax error, unexpected 'js' (T_STRING) in /home/cafeceyl/public_html/system/cafe/app/storage/views/7e5fc19716514ecac6994e8e63e2d6bc on line 79
+[29-Sep-2014 05:09:39 UTC] PHP Parse error:  syntax error, unexpected 'js' (T_STRING) in /home/cafeceyl/public_html/system/cafe/app/storage/views/7e5fc19716514ecac6994e8e63e2d6bc on line 82
+[29-Sep-2014 05:12:21 UTC] PHP Parse error:  syntax error, unexpected 'js' (T_STRING) in /home/cafeceyl/public_html/system/cafe/app/storage/views/7e5fc19716514ecac6994e8e63e2d6bc on line 76
+[29-Sep-2014 05:12:35 UTC] PHP Parse error:  syntax error, unexpected 'js' (T_STRING) in /home/cafeceyl/public_html/system/cafe/app/storage/views/7e5fc19716514ecac6994e8e63e2d6bc on line 76
+[03-Oct-2014 05:13:39 UTC] PHP Parse error:  syntax error, unexpected 'where' (T_STRING), expecting variable (T_VARIABLE) or '$' in /home/cafeceyl/public_html/system/cafe/app/controllers/UserController.php on line 126
+[03-Oct-2014 08:27:45 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/cafeceyl/public_html/system/cafe/app/controllers/UserController.php on line 190
+[07-Oct-2014 06:39:15 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/cafeceyl/public_html/system/cafe/app/routes.php on line 104
+[07-Oct-2014 06:39:45 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/cafeceyl/public_html/system/cafe/app/routes.php on line 104
+[07-Oct-2014 07:15:00 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/cafeceyl/public_html/system/cafe/app/routes.php on line 40
+[07-Oct-2014 07:28:17 UTC] PHP Fatal error:  Trait 'UserTrait' not found in /home/cafeceyl/public_html/system/cafe/app/models/FoodcategoryModel.php on line 5
+[09-Oct-2014 04:25:01 UTC] PHP Fatal error:  Class 'FoodcategoryModel' not found in /home/cafeceyl/public_html/system/cafe/app/controllers/FoodController.php on line 14
+[09-Oct-2014 04:25:42 UTC] PHP Fatal error:  Class 'FoodcategoryModel' not found in /home/cafeceyl/public_html/system/cafe/app/controllers/FoodController.php on line 14
+[09-Oct-2014 04:26:31 UTC] PHP Fatal error:  Class 'FoodcategoryModel' not found in /home/cafeceyl/public_html/system/cafe/app/controllers/FoodController.php on line 14
+[09-Oct-2014 04:26:47 UTC] PHP Fatal error:  Class 'FoodcategoryModel' not found in /home/cafeceyl/public_html/system/cafe/app/controllers/FoodController.php on line 14
+[09-Oct-2014 04:27:56 UTC] PHP Fatal error:  Class 'FoodcategoryModel' not found in /home/cafeceyl/public_html/system/cafe/app/controllers/FoodController.php on line 14
+[09-Oct-2014 04:27:58 UTC] PHP Fatal error:  Class 'FoodcategoryModel' not found in /home/cafeceyl/public_html/system/cafe/app/controllers/FoodController.php on line 14
