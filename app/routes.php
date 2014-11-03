@@ -143,5 +143,5 @@ Route::group(array('before' => 'auth'), function(){
 	// API to get Food Item
 	Route::get('api/food/ingredient/{id}', 'FoodController@getingredient');
 	// API to get Food Categorys
-	Route::get('api/food/ingredient/', 'FoodController@getingredients');
+	Route::get('api/food/ingredients/', 'FoodController@getingredients');
 });

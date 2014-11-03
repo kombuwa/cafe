@@ -7,8 +7,8 @@
 	        	{ id:2, name :"Juice" },
 	        ];*/
 	        
-	        $http.get('/api/food/categorys').success(function(categorys){
-	        	$scope.categorys = categorys;
+	        $http.get('/api/food/ingredients').success(function(ingredients){
+	        	$scope.ingredients = ingredients;
 	        });
 	        
 	        $scope.addCategory = function() {
@@ -18,8 +18,8 @@
 	        	$scope.isAdd = 1;
 	        	//$scope.categorys.push(category );
 	        	$http.post('/api/food/category', category).success(function(){
-		        	$http.get('/api/food/categorys').success(function(categorys){
-			        	$scope.categorys = categorys;
+		        	$http.get('/api/food/ingredients').success(function(ingredients){
+			        	$scope.ingredients = ingredients;
 			        	$scope.newCategoryName = "";
 			        	$scope.isAdd = 0;
 			        });
@@ -29,8 +29,8 @@
 	        $scope.deleteCategory = function(id) {
 
 	        	$http.delete('/api/food/category/'+id+'/').success(function(){
-		        	$http.get('/api/food/categorys').success(function(categorys){
-			        	$scope.categorys = categorys;
+		        	$http.get('/api/food/ingredients').success(function(ingredients){
+			        	$scope.ingredients = ingredients;
 			        	$scope.newCategoryName = "";
 			        	$scope.isAdd = 0;
 			        });
