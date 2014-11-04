@@ -72,6 +72,29 @@
 				$log.info('Modal dismissed at: ' + new Date());
 			});
 	        };
+
+	        $scope.addIng = function(id) {
+			var modalInstance = $modal.open({
+				templateUrl: 'ingDialog.html',
+				controller: 'ingController',
+				size: 'lg',
+				resolve: {
+					id: function () {
+				          return id;
+				        }
+				}
+			});
+			modalInstance.result.then(function (selectedItem) {
+				$scope.selected = selectedItem;
+				$http.put('/api/food/item/'+id+'/', selectedItem).success(function(){
+			        	$http.get('/api/food/items').success(function(items){
+				        	$scope.items = items;
+				        });
+			        });
+			}, function () {
+				$log.info('Modal dismissed at: ' + new Date());
+			});
+	        };
 	        
 	      };
 	      
