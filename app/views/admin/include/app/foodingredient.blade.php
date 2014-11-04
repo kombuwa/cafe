@@ -1,7 +1,7 @@
  	<script>
-	       myApp.controllers.ingredientController = function($scope, $http) {
+	      myApp.controllers.ingredientController = function($scope, $http) {
 	        //Do Awesome Controller Stuff As Usual
-	        $scope.message = 'Food Category!';
+	        $scope.message = 'Food Ingredient!';
 	        /*$scope.categorys = [
 	        	{ id:1, name :"Soup" },
 	        	{ id:2, name :"Juice" },
@@ -10,47 +10,34 @@
 	        $http.get('/api/food/ingredients').success(function(ingredients){
 	        	$scope.ingredients = ingredients;
 	        });
+	        
+	        $scope.addIngredient = function() {
+	        	var ingredient = {
+	        		name : $scope.newIngredientName
+	        	};
+	        	$scope.isAdd = 1;
+	        	//$scope.categorys.push(category );
+	        	$http.post('/api/food/ingredient', ingredient).success(function(){
+		        	$http.get('/api/food/ingredients').success(function(ingredients){
+			        	$scope.ingredients = ingredients;
+			        	$scope.newIngredientName = "";
+			        	$scope.isAdd = 0;
+			        });
+		        });
+	        };
+	       
+	        $scope.deleteIngredient = function(id) {
 
+	        	$http.delete('/api/food/ingredient/'+id+'/').success(function(){
+		        	$http.get('/api/food/ingredients').success(function(ingredients){
+			        	$scope.ingredients = ingredients;
+			        	$scope.newIngredientName = "";
+			        	$scope.isAdd = 0;
+			        });
+		        });
+	        };
+	        
 	      };
-	      
-	      myApp.controllers.editController = function($scope, $modalInstance, $http, id) {
-	      	
-	      	$scope.providers = [
-		    {value: 'kitchen', text: 'Kitchen'},
-		    {value: 'bar', text: 'Bar'}
-		  ];
-		
-		 
-	        
-	        $scope.loadCategory = function() {
-			$http.get('/api/food/categorys').success(function(categorys){
-	        		$scope.categorys = categorys;
-	        	});
-	  	};
-	  	
-	  	$scope.getCategory = function() {
-	  		id = $scope.item.fcid;
-	  		$http.get('/api/food/category/'+id+'/').success(function(category){
-	        		$scope.categoryname = category.name;
-	        		//return category.name;
-	        	});
-	      
-	  	}
-  
-	      	$http.get('/api/food/item/'+id+'/').success(function(item){
-	        	$scope.item = item;
-	        	$scope.getCategory();
-	        });
-	        
-	      	$scope.ok = function () {
-	    		$modalInstance.close($scope.item);
-	  	};
-	  	
-	  	$scope.cancel = function () {
-    			$modalInstance.dismiss('cancel');
-  		};
-  		
-	      }
 	
 	      myApp.config.push([function() {
 	        //Do Awesome Config Stuff As Usual
@@ -79,8 +66,6 @@
 	          //Do Awesome Service Stuff As Usual
 	        };
 	      }];
-	      
-	     
 	
 	      //Call This At The Bottom Of Your Layout
 	      //myApp.boot();
