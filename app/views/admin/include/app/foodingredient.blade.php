@@ -13,7 +13,10 @@
 	        
 	        $scope.addIngredient = function() {
 	        	var ingredient = {
-	        		name : $scope.newIngredientName
+	        		name : $scope.newIngredientName,
+	        		provider : $scope.newIngredientMeasurement,
+	        		description : $scope.newIngredientDescription,
+	        		
 	        	};
 	        	$scope.isAdd = 1;
 	        	//$scope.categorys.push(category );

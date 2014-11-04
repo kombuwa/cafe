@@ -83,4 +83,23 @@ class FoodController extends BaseController {
 	{
 		return FoodingredientModel::all();
 	}
+
+	public function postingredient()
+	{
+		return FoodingredientModel::create(Input::all());
+	}
+
+	public function putingredient($id)
+	{
+		FoodingredientModel::find($id)->update(Input::all());
+		return Response::json(['success'=>true]);
+	}
+
+	public function deleteingredient($id)
+	{
+		$ingredient= FoodingredientModel::find($id);
+		$ingredient->delete();
+		
+		return Response::json(['destroy'=>true]);
+	}
 }
