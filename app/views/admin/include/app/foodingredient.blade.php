@@ -1,7 +1,7 @@
  	<script>
-	      myApp.controllers.categoryController = function($scope, $http) {
+	      myApp.controllers.ingredientController = function($scope, $http) {
 	        //Do Awesome Controller Stuff As Usual
-	        $scope.message = 'Food Category!';
+	        $scope.message = 'Food Ingredient!';
 	        /*$scope.categorys = [
 	        	{ id:1, name :"Soup" },
 	        	{ id:2, name :"Juice" },
@@ -11,27 +11,27 @@
 	        	$scope.ingredients = ingredients;
 	        });
 	        
-	        $scope.addCategory = function() {
-	        	var category = {
-	        		name : $scope.newCategoryName
+	        $scope.addIngredient = function() {
+	        	var ingredient = {
+	        		name : $scope.newIngredientName
 	        	};
 	        	$scope.isAdd = 1;
 	        	//$scope.categorys.push(category );
-	        	$http.post('/api/food/category', category).success(function(){
+	        	$http.post('/api/food/ingredient', ingredient).success(function(){
 		        	$http.get('/api/food/ingredients').success(function(ingredients){
 			        	$scope.ingredients = ingredients;
-			        	$scope.newCategoryName = "";
+			        	$scope.newIngredientName = "";
 			        	$scope.isAdd = 0;
 			        });
 		        });
 	        };
 	       
-	        $scope.deleteCategory = function(id) {
+	        $scope.deleteIngredient = function(id) {
 
-	        	$http.delete('/api/food/category/'+id+'/').success(function(){
+	        	$http.delete('/api/food/ingredient/'+id+'/').success(function(){
 		        	$http.get('/api/food/ingredients').success(function(ingredients){
 			        	$scope.ingredients = ingredients;
-			        	$scope.newCategoryName = "";
+			        	$scope.newIngredientName = "";
 			        	$scope.isAdd = 0;
 			        });
 		        });

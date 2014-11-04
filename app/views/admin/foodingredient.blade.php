@@ -4,17 +4,24 @@
 <head>
 	<!-- Header -->
 	@include('admin.include.head')
-    
+        <script>
+            //Call This At The Top Of Your Layout
+            myApp = new AngularBooter('myApp'); // <-- What do you want to call your ng-app?
+        </script>
 
 </head>
 
-<body>
+<body ng-cloak ng-app="myApp">
 	<?php 
 		$username = Session::get('current_user');
 		$user_access = Session::get('user_access');
 		$user_id = Session::get('user_id');
 	 ?>
-    <div id="wrapper">
+
+     <!-- Angular -->
+    @include('admin.include.app.foodingredient')
+
+    <div id="wrapper" ng-controller="ingredientController">
 
         <!-- Navigation -->
 	@include('admin.include.nav')
