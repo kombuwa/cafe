@@ -1,5 +1,5 @@
  	<script>
-	      myApp.controllers.ingredientController = function($scope, $http) {
+	      myApp.controllers.ingredientController = function($scope, $modal, $http, $log) {
 	        //Do Awesome Controller Stuff As Usual
 	        $scope.message = 'Food Ingredient!';
 	        /*$scope.categorys = [
