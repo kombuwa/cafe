@@ -30,7 +30,7 @@
 	@include('admin.include.cont_top')
         
                     <div class="panel panel-default">
-		/*<div class="panel-body">
+		<!--<div class="panel-body">
 		<form ng-submit="addItem()">
 			<div class="row">
 			<div class="col-lg-6">
@@ -67,7 +67,7 @@
 			</div>
 			</div>
 		</form>	
-		</div>*/
+		</div>-->
 		</div>
 		
 		<div class="panel panel-default">
