@@ -36,34 +36,23 @@
 			<div class="col-lg-6">
 				<div class="form-group">
                                     <label>Name</label>
-                                    <input class="form-control" ng-model="newItemName" required>
+                                    <input class="form-control" ng-model="newIngredientName" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Food Category</label>
-                                    <select class="form-control" ng-model="newItemCategory" ng-options="category.id as category.name for category in categorys" >
-                                        <option value="">Choose Category</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Provider</label>
-                                    <select class="form-control" ng-model="newItemProvider">
-                                    	<option value="">Choose Provider</option>
-                                        <option value="kitchen">Kitchen</option>
-                                        <option value="bar">Bar</option>
+                                    <label>Measurement</label>
+                                    <select class="form-control" ng-model="newIngredientMeasurement">
+                                    	<option value="">Choose Measurement</option>
+                                        <option value="Litre">Litre</option>
+                                        <option value="Gram">Gram</option>
                                     </select>
                                 </div>
 			</div>
 			<div class="col-lg-6">
 				<div class="form-group">
-                                    <label>Description</label>
-                                    <textarea rows="3" class="form-control" ng-model="newItemDescription"></textarea>
-                                </div>
-                                <div class="form-group input-group">
-                                    <span class="input-group-addon">LKR</i>
-                                    </span>
-                                    <input type="number" placeholder="0.00" min="0.01" step="0.01" ng-model="newItemPrice" class="form-control">
-                                </div>
-                                <button class="btn btn-default" type="submit">Add Category</button> <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i>
+                    <label>Description</label>
+                    <textarea rows="3" class="form-control" ng-model="newIngredientDescription"></textarea>
+                </div>
+                <button class="btn btn-default" type="submit">Add Category</button> <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i>
 			</div>
 			</div>
 		</form>	
