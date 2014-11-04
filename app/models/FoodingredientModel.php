@@ -23,6 +23,8 @@ class FoodingredientModel extends Eloquent {
 	
 	public static $rules = array(
 			'name' => 'alpha_num|max:50',
+			'measurement' => 'alpha_num|max:50',
+			'description' => 'alpha_num|max:255',
 		);
 
 }
