@@ -136,6 +136,9 @@
   		};
   		
 	      }
+
+	       myApp.controllers.ingController = function($scope, $modalInstance, $http, id) {
+	       }
 	
 	      myApp.config.push([function() {
 	        //Do Awesome Config Stuff As Usual
