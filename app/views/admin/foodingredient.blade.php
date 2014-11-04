@@ -92,8 +92,8 @@
                                             <td>@{{ingredient.description|characters:48}}</td>
                                             <td>@{{ingredient.measurement}}</td>
                                             <td><div align="right" >
-                                            <button class="btn btn-warning" ng-click="edit(item.id)"><i class="fa fa-pencil-square-o"></i></button>
-                                            <a class="btn btn-danger" ng-click="deleteItem(item.id)"><i class="fa fa-trash-o"></i></a>
+                                            <button class="btn btn-warning" ng-click="edit(ingredient.id)"><i class="fa fa-pencil-square-o"></i></button>
+                                            <a class="btn btn-danger" ng-click="deleteItem(ingredient.id)"><i class="fa fa-trash-o"></i></a>
                                             </div></td>
                                         </tr>
                                     </tbody>
