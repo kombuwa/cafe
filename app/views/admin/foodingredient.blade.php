@@ -52,7 +52,7 @@
                     <label>Description</label>
                     <textarea rows="3" class="form-control" ng-model="newIngredientDescription"></textarea>
                 </div>
-                <button class="btn btn-default" type="submit">Add Category</button> <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i>
+                <button class="btn btn-default" type="submit">Add Ingredient</button> <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i>
 			</div>
 			</div>
 		</form>	
