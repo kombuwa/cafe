@@ -125,6 +125,9 @@
     
     <!-- Footer -->
 	@include('admin.include.foot')
+    <script>
+    myApp.boot();
+    </script>
 
 </body>
 
