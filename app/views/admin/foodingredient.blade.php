@@ -23,6 +23,25 @@
 
     <div id="wrapper" ng-controller="ingredientController">
 
+        <!-- Dialog -->
+        <script type="text/ng-template" id="editDialog.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Edit Item!</h3>
+        </div>
+        <div class="modal-body">
+            
+            <b>Name:</b> <a href="#" editable-text="item.name">@{{item.name || 'no data'}}</a><br>
+            <b>Category:</b> <a href="#" editable-select="item.fcid" onshow="loadCategory($data)" onaftersave="getCategory()" e-ng-options="category.id as category.name for category in categorys">@{{ categoryname  || 'no data'}}</a><br>
+            <b>Provider:</b> <a href="#" editable-select="item.provider" e-ng-options="p.value as p.text for p in providers">@{{item.provider || 'no data'}}</a><br>
+            <b>Description:</b> <a href="#" editable-textarea="item.description" e-rows="7" e-cols="40">@{{item.description||'no data'|characters:48}}</a><br>
+            <b>Price:</b> <a href="#" editable-text="item.price">@{{item.price || 'no data'}}</a><br>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+        </script>
+
         <!-- Navigation -->
 	@include('admin.include.nav')
 

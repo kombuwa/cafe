@@ -43,6 +43,29 @@
 			        });
 		        });
 	        };
+
+	        $scope.edit = function(id) {
+			var modalInstance = $modal.open({
+				templateUrl: 'editDialog.html',
+				controller: 'editController',
+				size: 'lg',
+				resolve: {
+					id: function () {
+				          return id;
+				        }
+				}
+			});
+			modalInstance.result.then(function (selectedingredient) {
+				$scope.selected = selectedingredient;
+				$http.put('/api/food/ingredient/'+id+'/', selectedingredient).success(function(){
+			        	$http.get('/api/food/ingredients').success(function(ingredients){
+				        	$scope.ingredients = ingredients;
+				        });
+			        });
+			}, function () {
+				$log.info('Modal dismissed at: ' + new Date());
+			});
+	        };
 	        
 	      };
 	
