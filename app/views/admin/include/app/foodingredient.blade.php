@@ -1,5 +1,5 @@
  	<script>
-	      myApp.controllers.ingredientController = function($scope, $http) {
+	      myApp.controllers.categoryController = function($scope, $http) {
 	        //Do Awesome Controller Stuff As Usual
 	        $scope.message = 'Food Category!';
 	        /*$scope.categorys = [
@@ -7,10 +7,36 @@
 	        	{ id:2, name :"Juice" },
 	        ];*/
 	        
-	        $http.get('/api/food/ingredients').success(function(ingredients){
-	        	$scope.ingredients = ingredients;
+	        $http.get('/api/food/categorys').success(function(categorys){
+	        	$scope.categorys = categorys;
 	        });
+	        
+	        $scope.addCategory = function() {
+	        	var category = {
+	        		name : $scope.newCategoryName
+	        	};
+	        	$scope.isAdd = 1;
+	        	//$scope.categorys.push(category );
+	        	$http.post('/api/food/category', category).success(function(){
+		        	$http.get('/api/food/categorys').success(function(categorys){
+			        	$scope.categorys = categorys;
+			        	$scope.newCategoryName = "";
+			        	$scope.isAdd = 0;
+			        });
+		        });
+	        };
+	       
+	        $scope.deleteCategory = function(id) {
 
+	        	$http.delete('/api/food/category/'+id+'/').success(function(){
+		        	$http.get('/api/food/categorys').success(function(categorys){
+			        	$scope.categorys = categorys;
+			        	$scope.newCategoryName = "";
+			        	$scope.isAdd = 0;
+			        });
+		        });
+	        };
+	        
 	      };
 	
 	      myApp.config.push([function() {
