@@ -72,9 +72,9 @@
 
 	      myApp.controllers.editController = function($scope, $modalInstance, $http, id) {
 	      	
-	      	$scope.providers = [
-		    {value: 'kitchen', text: 'Kitchen'},
-		    {value: 'bar', text: 'Bar'}
+	      	$scope.measurement = [
+		    {value: 'Litre', text: 'Litre'},
+		    {value: 'Gram', text: 'Gram'}
 		  	];
 		
 		 
@@ -85,22 +85,13 @@
 	        	});
 	  		};
 	  	
-		  	$scope.getCategory = function() {
-		  		id = $scope.item.fcid;
-		  		$http.get('/api/food/category/'+id+'/').success(function(category){
-		        		$scope.categoryname = category.name;
-		        		//return category.name;
-		        	});
-		      
-		  	}
 	  
-	      	$http.get('/api/food/item/'+id+'/').success(function(item){
-	        	$scope.item = item;
-	        	$scope.getCategory();
+	      	$http.get('/api/food/ingredient/'+id+'/').success(function(ingredient){
+	        	$scope.ingredient = ingredient;
 	        });
 		        
 		    $scope.ok = function () {
-		    		$modalInstance.close($scope.item);
+		    		$modalInstance.close($scope.ingredient);
 		  	};
 		  	
 		  	$scope.cancel = function () {
