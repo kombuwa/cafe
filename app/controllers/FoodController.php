@@ -89,7 +89,7 @@ class FoodController extends BaseController {
 		return FoodingredientModel::create(Input::all());
 	}
 
-	public function postingredient($id)
+	public function putingredient($id)
 	{
 		FoodingredientModel::find($id)->update(Input::all());
 		return Response::json(['success'=>true]);
