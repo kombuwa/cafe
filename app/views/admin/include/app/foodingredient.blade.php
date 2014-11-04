@@ -68,6 +68,46 @@
 	        };
 	        
 	      };
+
+
+	      myApp.controllers.editController = function($scope, $modalInstance, $http, id) {
+	      	
+	      	$scope.providers = [
+		    {value: 'kitchen', text: 'Kitchen'},
+		    {value: 'bar', text: 'Bar'}
+		  	];
+		
+		 
+	        
+	        $scope.loadCategory = function() {
+				$http.get('/api/food/categorys').success(function(categorys){
+	        		$scope.categorys = categorys;
+	        	});
+	  		};
+	  	
+		  	$scope.getCategory = function() {
+		  		id = $scope.item.fcid;
+		  		$http.get('/api/food/category/'+id+'/').success(function(category){
+		        		$scope.categoryname = category.name;
+		        		//return category.name;
+		        	});
+		      
+		  	}
+	  
+	      	$http.get('/api/food/item/'+id+'/').success(function(item){
+	        	$scope.item = item;
+	        	$scope.getCategory();
+	        });
+		        
+		    $scope.ok = function () {
+		    		$modalInstance.close($scope.item);
+		  	};
+		  	
+		  	$scope.cancel = function () {
+	    			$modalInstance.dismiss('cancel');
+	  		};
+  		
+	      }
 	
 	      myApp.config.push([function() {
 	        //Do Awesome Config Stuff As Usual
