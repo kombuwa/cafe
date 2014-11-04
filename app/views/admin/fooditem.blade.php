@@ -42,7 +42,7 @@
             <button class="btn btn-primary" ng-click="ok()">OK</button>
             <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
         </div>
-	</script>
+	   </script>
 
         <!-- Navigation -->
 	@include('admin.include.nav')
@@ -128,6 +128,7 @@
                                             <td>@{{item.description|characters:48}}</td>
                                             <td>@{{item.price}}</td>
                                             <td><div align="right" >
+                                            <button class="btn btn-info" ng-click="addIng(item.id)"><i class="fa fa-puzzle-piece"></i></button>
                                             <button class="btn btn-warning" ng-click="edit(item.id)"><i class="fa fa-pencil-square-o"></i></button>
                                             <a class="btn btn-danger" ng-click="deleteItem(item.id)"><i class="fa fa-trash-o"></i></a>
                                             </div></td>
