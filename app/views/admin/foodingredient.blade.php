@@ -93,7 +93,7 @@
                                             <td>@{{ingredient.measurement}}</td>
                                             <td><div align="right" >
                                             <button class="btn btn-warning" ng-click="edit(ingredient.id)"><i class="fa fa-pencil-square-o"></i></button>
-                                            <a class="btn btn-danger" ng-click="deleteItem(ingredient.id)"><i class="fa fa-trash-o"></i></a>
+                                            <a class="btn btn-danger" ng-click="deleteIngredient(ingredient.id)"><i class="fa fa-trash-o"></i></a>
                                             </div></td>
                                         </tr>
                                     </tbody>
