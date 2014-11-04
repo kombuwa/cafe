@@ -14,7 +14,7 @@
 	        $scope.addIngredient = function() {
 	        	var ingredient = {
 	        		name : $scope.newIngredientName,
-	        		provider : $scope.newIngredientMeasurement,
+	        		measurement : $scope.newIngredientMeasurement,
 	        		description : $scope.newIngredientDescription,
 	        		
 	        	};
@@ -24,6 +24,8 @@
 		        	$http.get('/api/food/ingredients').success(function(ingredients){
 			        	$scope.ingredients = ingredients;
 			        	$scope.newIngredientName = "";
+			        	$scope.newIngredientMeasurement = "";
+			        	$scope.newIngredientDescription = "";
 			        	$scope.isAdd = 0;
 			        });
 		        });
@@ -35,6 +37,8 @@
 		        	$http.get('/api/food/ingredients').success(function(ingredients){
 			        	$scope.ingredients = ingredients;
 			        	$scope.newIngredientName = "";
+			        	$scope.newIngredientMeasurement = "";
+			        	$scope.newIngredientDescription = "";
 			        	$scope.isAdd = 0;
 			        });
 		        });
