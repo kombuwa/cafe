@@ -31,7 +31,7 @@
         
                     <div class="panel panel-default">
 		<div class="panel-body">
-		<form ng-submit="addItem()">
+		<form ng-submit="addIngredient()">
 			<div class="row">
 			<div class="col-lg-6">
 				<div class="form-group">
