@@ -143,8 +143,8 @@
 	        	$scope.ingredients = ingredients;
 	        });
 
-	        $http.get('/api/food/item/ingredients').success(function(item_ingredients){
-	        	$scope.item_ingredients = item_ingredients;
+	        $http.get('/api/food/item/ingredients').success(function(itemingredients){
+	        	$scope.itemingredients = itemingredients;
 	        });
 
 	        $scope.addIngredient = function() {

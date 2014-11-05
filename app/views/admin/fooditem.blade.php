@@ -89,9 +89,9 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr ng-repeat="item_ingredient in item_ingredients | filter:search">
-                                            <td>@{{item_ingredient.id}}</td>
-                                            <td>@{{item_ingredient.name}}</td>
+                                        <tr ng-repeat="itemingredient in itemingredients | filter:search">
+                                            <td>@{{itemingredient.fiid}}</td>
+                                            <td>@{{itemingredient.ingredient}}</td>
                                             <td></td>
                                         </tr>
                                     </tbody>
