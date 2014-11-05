@@ -57,6 +57,11 @@
                         <select class="form-control" ng-model="newIngredient" ng-options="ingredient.id as ingredient.name for ingredient in ingredients" >
                             <option value="">Choose Ingredient</option>
                         </select>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon">Quantity</i>
+                            </span>
+                            <input type="number" placeholder="0.000" min="0.001" step="0.001" ng-model="newQty" class="form-control">
+                        </div>
                     </div>
                     <div class="col-xs-6 col-md-4"><button class="btn btn-default" type="submit">Add Ingredient</button>
                         <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i>
