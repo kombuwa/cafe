@@ -100,6 +100,7 @@ CREATE TABLE fooditem_ingredient
 id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 fiid MEDIUMINT,
 inid MEDIUMINT,
+qty DECIMAL(7,3),
 created_at TIMESTAMP,
 updated_at TIMESTAMP
 )engine=innodb;
