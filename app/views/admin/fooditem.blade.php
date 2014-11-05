@@ -63,8 +63,8 @@
                             <input type="number" placeholder="0.000" min="0.001" step="0.001" ng-model="newQty" class="form-control">
                         </div>
                     </div>
-                    <div class="col-xs-6 col-md-4"><button class="btn btn-default" type="submit">Add Ingredient</button>
-                        <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i><br><br><br><br><br>
+                    <div class="col-xs-6 col-md-4" style="height:125px;"><button class="btn btn-default" type="submit">Add Ingredient</button>
+                        <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i>
                     </div>
                 </form>
             </div>
