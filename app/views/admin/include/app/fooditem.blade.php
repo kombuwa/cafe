@@ -149,7 +149,7 @@
 
 	        $scope.addIngredient = function() {
 	        	var ingredient = {
-	        		inid : $scope.newCategoryName,
+	        		inid : $scope.newIngredient,
 	        		fiid : id
 	        	};
 	        	$scope.isAdd = 1;
@@ -157,7 +157,7 @@
 	        	$http.post('/api/food/item/ingredient', ingredient).success(function(){
 		        	$http.get('/api/food/item/ingredients').success(function(item_ingredients){
 			        	$scope.item_ingredients = item_ingredients;
-			        	$scope.newCategoryName = "";
+			        	$scope.newIngredient = "";
 			        	$scope.isAdd = 0;
 			        });
 		        });
