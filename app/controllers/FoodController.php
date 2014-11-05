@@ -102,4 +102,14 @@ class FoodController extends BaseController {
 		
 		return Response::json(['destroy'=>true]);
 	}
+
+	public function getfooditem_ingredients()
+	{
+		return Fooditem_ingredientModel::all();
+	}
+	
+	public function postfooditem_ingredient()
+	{
+		return Fooditem_ingredientModel::create(Input::all());
+	}
 }
