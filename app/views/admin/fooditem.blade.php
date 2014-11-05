@@ -47,7 +47,7 @@
        <!-- ing Dialog -->
        <script type="text/ng-template" id="ingDialog.html">
         <div class="modal-header">
-            <h3 class="modal-title">Add Ingredients!</h3>
+            <h3 class="modal-title">Ingredients!</h3>
         </div>
         <div class="modal-body">
             
@@ -63,6 +63,45 @@
                     </div>
                 </form>
             </div>
+
+            <div class="panel panel-default">
+                        <div class="panel-heading">
+                            
+                                <div class="row">
+                
+                                <div class="col-md-8">Food Category</div>
+                                <div class="col-md-4"><input type="search" class="form-control input-sm" placeholder="Search" ng-model="search"></div>
+                                
+                                </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <div>
+                    
+                                </div>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Name</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="item_ingredient in item_ingredients | filter:search">
+                                            <td>@{{item_ingredient.id}}</td>
+                                            <td>@{{item_ingredient.name}}</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
 
         </div>
         <div class="modal-footer">
