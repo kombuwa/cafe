@@ -152,7 +152,7 @@ Route::group(array('before' => 'auth'), function(){
 	Route::delete('api/food/ingredient/{id}', 'FoodController@deleteingredient');
 
 	// API to get Food ingredients
-	Route::get('api/food/item_ingredients/', 'FoodController@getfooditem_ingredients');
+	Route::get('api/food/item_ingredients/{fiid}', 'FoodController@getfooditem_ingredients');
 	// API to add Food ingredient
 	Route::post('api/food/item_ingredient/', 'FoodController@postfooditem_ingredient');
 
