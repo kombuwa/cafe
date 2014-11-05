@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <div class="col-xs-6 col-md-4"><button class="btn btn-default" type="submit">Add Ingredient</button>
-                        <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i><br><br><br><br>
+                        <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i><br><br><br><br><br>
                     </div>
                 </form>
             </div>
