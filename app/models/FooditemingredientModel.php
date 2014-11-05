@@ -19,11 +19,12 @@ class FooditemingredientModel extends Eloquent {
 	//protected $hidden = array('password', 'remember_token');
 	
 	//Extra user tabel fields 
-	protected $fillable = array('fiid','inid',);
+	protected $fillable = array('fiid','inid', 'qty');
 	
 	public static $rules = array(
 			'fiid' => 'required|numeric',
 			'inid' => 'required|numeric',
+			'qty' => 'required|numeric',
 		);
 	
 	public function getIngredientAttribute()
