@@ -1,6 +1,6 @@
 <?php
 
-class Fooditem_ingredientModel extends Eloquent {
+class FooditemingredientModel extends Eloquent {
 
 
 	/**

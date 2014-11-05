@@ -105,11 +105,11 @@ class FoodController extends BaseController {
 
 	public function getfooditem_ingredients()
 	{
-		return Fooditem_ingredientModel::all();
+		return FooditemingredientModel::all();
 	}
 	
 	public function postfooditem_ingredient()
 	{
-		return Fooditem_ingredientModel::create(Input::all());
+		return FooditemingredientModel::create(Input::all());
 	}
 }
