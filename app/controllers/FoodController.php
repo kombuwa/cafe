@@ -103,9 +103,9 @@ class FoodController extends BaseController {
 		return Response::json(['destroy'=>true]);
 	}
 
-	public function getfooditem_ingredients()
+	public function getfooditem_ingredients($fiid)
 	{
-		return FooditemingredientModel::all();
+		return FooditemingredientModel::where('fiid', '=', $fiid)->get();;
 	}
 	
 	public function postfooditem_ingredient()
