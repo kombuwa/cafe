@@ -88,14 +88,13 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
                                             <th>Name</th>
+                                            <th>Qty</th>
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr ng-repeat="itemingredient in itemingredients | filter:search">
-                                            <td>@{{itemingredient.fiid}}</td>
                                             <td>@{{itemingredient.ingredient}}</td>
                                             <td>@{{itemingredient.qty}}</td>
                                             <td></td>
