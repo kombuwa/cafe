@@ -97,6 +97,7 @@
                                         <tr ng-repeat="itemingredient in itemingredients | filter:search">
                                             <td>@{{itemingredient.fiid}}</td>
                                             <td>@{{itemingredient.ingredient}}</td>
+                                            <td>@{{itemingredient.qty}}</td>
                                             <td></td>
                                         </tr>
                                     </tbody>
