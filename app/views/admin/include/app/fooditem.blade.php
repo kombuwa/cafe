@@ -143,6 +143,21 @@
 	        	$scope.ingredients = ingredients;
 	        });
 
+	        $scope.addIngredient = function() {
+	        	var category = {
+	        		name : $scope.newCategoryName
+	        	};
+	        	$scope.isAdd = 1;
+	        	//$scope.categorys.push(category );
+	        	$http.post('/api/food/category', category).success(function(){
+		        	$http.get('/api/food/categorys').success(function(categorys){
+			        	$scope.categorys = categorys;
+			        	$scope.newCategoryName = "";
+			        	$scope.isAdd = 0;
+			        });
+		        });
+	        };
+
        		$scope.ok = function () {
 	    		$modalInstance.close($scope.item);
 	  		};

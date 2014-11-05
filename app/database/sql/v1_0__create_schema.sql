@@ -92,3 +92,14 @@ INSERT INTO foodingredient(
 id,name,description,measurement,created_at,updated_at)
 VALUES
 (NULL,"Cooking oil","Vegetable/Sunflower","Litre",NULL,NULL);
+
+/* Create Food Item to Ingredient relationship Table */
+DROP TABLE IF EXISTS fooditem_ingredient;
+CREATE TABLE fooditem_ingredient
+(
+id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+fiid MEDIUMINT,
+inid MEDIUMINT,
+created_at TIMESTAMP,
+updated_at TIMESTAMP
+)engine=innodb;
