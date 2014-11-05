@@ -143,7 +143,7 @@
 	        	$scope.ingredients = ingredients;
 	        });
 
-	        $http.get('/api/food/item/ingredients').success(function(itemingredients){
+	        $http.get('/api/food/item_ingredients').success(function(itemingredients){
 	        	$scope.itemingredients = itemingredients;
 	        });
 
@@ -154,8 +154,8 @@
 	        	};
 	        	$scope.isAdd = 1;
 	        	//$scope.categorys.push(category );
-	        	$http.post('/api/food/item/ingredient', ingredient).success(function(){
-		        	$http.get('/api/food/item/ingredients').success(function(item_ingredients){
+	        	$http.post('/api/food/item_ingredient', ingredient).success(function(){
+		        	$http.get('/api/food/item_ingredients').success(function(item_ingredients){
 			        	$scope.item_ingredients = item_ingredients;
 			        	$scope.newIngredient = "";
 			        	$scope.isAdd = 0;
