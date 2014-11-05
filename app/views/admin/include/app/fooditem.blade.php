@@ -149,8 +149,8 @@
 
 	        $scope.addIngredient = function() {
 	        	var ingredient = {
-	        		inid : $scope.newCategoryName
-	        		inid : $scope.newCategoryName
+	        		inid : $scope.newCategoryName,
+	        		fiid : id
 	        	};
 	        	$scope.isAdd = 1;
 	        	//$scope.categorys.push(category );
