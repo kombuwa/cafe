@@ -138,6 +138,11 @@
 	      }
 
 	       myApp.controllers.ingController = function($scope, $modalInstance, $http, id) {
+	       	
+	       	$http.get('/api/food/ingredients').success(function(ingredients){
+	        	$scope.ingredients = ingredients;
+	        });
+
        		$scope.ok = function () {
 	    		$modalInstance.close($scope.item);
 	  		};
