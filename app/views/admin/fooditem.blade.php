@@ -56,7 +56,7 @@
                     <div class="col-xs-12 col-md-8">
                         <select class="form-control" ng-model="newIngredient" ng-options="ingredient.id as ingredient.name for ingredient in ingredients" >
                             <option value="">Choose Ingredient</option>
-                        </select>
+                        </select><br>
                         <div class="form-group input-group">
                             <span class="input-group-addon">Quantity</i>
                             </span>
