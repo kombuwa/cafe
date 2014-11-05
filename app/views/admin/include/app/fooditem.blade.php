@@ -155,7 +155,7 @@
 	        	$scope.isAdd = 1;
 	        	//$scope.categorys.push(category );
 	        	$http.post('/api/food/item_ingredient', ingredient).success(function(){
-		        	$http.get('/api/food/item_ingredients/'+id+'/').success(function(item_ingredients){
+		        	$http.get('/api/food/item_ingredients/'+id+'/').success(function(itemingredients){
 			        	$scope.itemingredients = itemingredients;
 			        	$scope.newIngredient = "";
 			        	$scope.isAdd = 0;
