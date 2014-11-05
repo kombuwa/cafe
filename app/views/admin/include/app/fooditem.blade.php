@@ -143,15 +143,20 @@
 	        	$scope.ingredients = ingredients;
 	        });
 
+	        $http.get('/api/food/item/ingredients').success(function(item_ingredients){
+	        	$scope.item_ingredients = item_ingredients;
+	        });
+
 	        $scope.addIngredient = function() {
-	        	var category = {
-	        		name : $scope.newCategoryName
+	        	var ingredient = {
+	        		inid : $scope.newCategoryName
+	        		inid : $scope.newCategoryName
 	        	};
 	        	$scope.isAdd = 1;
 	        	//$scope.categorys.push(category );
-	        	$http.post('/api/food/category', category).success(function(){
-		        	$http.get('/api/food/categorys').success(function(categorys){
-			        	$scope.categorys = categorys;
+	        	$http.post('/api/food/item/ingredient', ingredient).success(function(){
+		        	$http.get('/api/food/item/ingredients').success(function(item_ingredients){
+			        	$scope.item_ingredients = item_ingredients;
 			        	$scope.newCategoryName = "";
 			        	$scope.isAdd = 0;
 			        });
