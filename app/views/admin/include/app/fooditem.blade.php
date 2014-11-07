@@ -177,7 +177,7 @@
 	        };
 
 			$scope.selectingredient = function () {
-				$scope.quantity = $scope.ingredient.measurement;
+				$scope.quantity = $scope.newIngredient.measurement;
 			}
 
        		$scope.ok = function () {
