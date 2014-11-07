@@ -164,6 +164,16 @@
 		        });
 	        };
 
+	        $scope.deleteIngredient = function(myid) {
+
+	        	$http.delete('/api/food/item_ingredient/'+myid+'/').success(function(){
+		        	$http.get('/api/food/item_ingredients/'+id+'/').success(function(itemingredients){
+			        	$scope.itemingredients = itemingredients;
+			        	$scope.isAdd = 0;
+			        });
+		        });
+	        };
+
        		$scope.ok = function () {
 	    		$modalInstance.close($scope.item);
 	  		};
