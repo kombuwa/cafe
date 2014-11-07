@@ -74,7 +74,8 @@
 	      	
 	      	$scope.measurement = [
 		    {value: 'Litre', text: 'Litre'},
-		    {value: 'Gram', text: 'Gram'}
+		    {value: 'Gram', text: 'Gram'},
+		    {value: 'Pieces', text: 'Pieces'}
 		  	];
 		
 		 

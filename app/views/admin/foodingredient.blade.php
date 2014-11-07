@@ -31,7 +31,7 @@
         <div class="modal-body">
             
             <b>Name:</b> <a href="#" editable-text="ingredient.name">@{{ingredient.name || 'no data'}}</a><br>
-            <b>Provider:</b> <a href="#" editable-select="ingredient.measurement" e-ng-options="m.value as m.text for m in measurement">@{{ingredient.measurement || 'no data'}}</a><br>
+            <b>Measurement:</b> <a href="#" editable-select="ingredient.measurement" e-ng-options="m.value as m.text for m in measurement">@{{ingredient.measurement || 'no data'}}</a><br>
             <b>Description:</b> <a href="#" editable-textarea="ingredient.description" e-rows="7" e-cols="40">@{{ingredient.description||'no data'|characters:48}}</a><br>
         </div>
         <div class="modal-footer">
@@ -61,6 +61,7 @@
                                     	<option value="">Choose Measurement</option>
                                         <option value="Litre">Litre</option>
                                         <option value="Gram">Gram</option>
+                                        <option value="Pieces">Pieces</option>
                                     </select>
                                 </div>
 			</div>
