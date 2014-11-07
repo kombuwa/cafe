@@ -139,6 +139,8 @@
 
 	       myApp.controllers.ingController = function($scope, $modalInstance, $http, id) {
 	       	
+	       	$scope.quantity = 'Quantity';
+
 	       	$http.get('/api/food/ingredients').success(function(ingredients){
 	        	$scope.ingredients = ingredients;
 	        });

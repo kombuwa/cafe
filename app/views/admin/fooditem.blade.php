@@ -58,7 +58,7 @@
                             <option value="">Choose Ingredient</option>
                         </select><br>
                         <div class="form-group input-group">
-                            <span class="input-group-addon">Quantity</i>
+                            <span class="input-group-addon">@{{quantity}}</i>
                             </span>
                             <input type="number" placeholder="0.000" min="0.001" step="0.001" ng-model="newQty" class="form-control">
                         </div>
