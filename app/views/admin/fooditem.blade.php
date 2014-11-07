@@ -97,7 +97,9 @@
                                         <tr ng-repeat="itemingredient in itemingredients | filter:search">
                                             <td>@{{itemingredient.ingredient}}</td>
                                             <td>@{{itemingredient.qty}}</td>
-                                            <td></td>
+                                            <td><div align="right" >
+                                            <a class="btn btn-danger" ng-click="deleteIngredient(itemingredient.id)"><i class="fa fa-trash-o"></i></a>
+                                            </div></td>
                                         </tr>
                                     </tbody>
                                 </table>
