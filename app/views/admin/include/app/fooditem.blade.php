@@ -176,6 +176,10 @@
 		        });
 	        };
 
+			$scope.selectingredient = function () {
+				$scope.quantity = $scope.ingredient.measurement;
+			}
+
        		$scope.ok = function () {
 	    		$modalInstance.close($scope.item);
 	  		};

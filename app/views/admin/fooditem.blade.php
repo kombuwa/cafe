@@ -54,7 +54,7 @@
             <div class="row show-grid">
                 <form ng-submit="addIngredient()">
                     <div class="col-xs-12 col-md-8">
-                        <select class="form-control" ng-model="newIngredient" ng-options="ingredient.id as ingredient.name for ingredient in ingredients" >
+                        <select class="form-control" ng-model="newIngredient" ng-options="ingredient.id as ingredient.name for ingredient in ingredients" ng-change="selectingredient()" >
                             <option value="">Choose Ingredient</option>
                         </select><br>
                         <div class="form-group input-group">
