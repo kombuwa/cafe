@@ -9,7 +9,7 @@ class FooditemModel extends Eloquent {
 	 * @var string
 	 */
 	protected $table = 'fooditem';
-	protected $appends = array('category');
+	protected $appends = array('category', 'ingredients');
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -36,5 +36,11 @@ class FooditemModel extends Eloquent {
 		$category = FoodcategoryModel::find($this->fcid);
 		return $category->name;
 		}
+	}
+
+	public function getIngredientsAttribute()
+	{
+		//$item= FooditemModel::where('fcid', '=', $this->id)->firstOrFail();
+		return FooditemingredientModel::where('fiid', '=', $this->id)->count();;
 	}
 }

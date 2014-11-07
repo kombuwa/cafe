@@ -201,6 +201,7 @@
                                             <td>@{{item.description|characters:48}}</td>
                                             <td>@{{item.price}}</td>
                                             <td><div align="right" >
+                                            <span class="badge" ng-show="item.ingredients" title="Items">@{{item.ingredients}}</span>    
                                             <button class="btn btn-info" ng-click="addIng(item.id)"><i class="fa fa-puzzle-piece"></i></button>
                                             <button class="btn btn-warning" ng-click="edit(item.id)"><i class="fa fa-pencil-square-o"></i></button>
                                             <a class="btn btn-danger" ng-click="deleteItem(item.id)"><i class="fa fa-trash-o"></i></a>

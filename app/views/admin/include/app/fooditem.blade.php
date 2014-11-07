@@ -183,7 +183,7 @@
 			        	$scope.quantity = ingredient.measurement;
 			        });
 				}else{
-					$scope.quantity = 'quantity';
+					$scope.quantity = 'Quantity';
 				}
 			}
 
