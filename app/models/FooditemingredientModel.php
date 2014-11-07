@@ -9,7 +9,7 @@ class FooditemingredientModel extends Eloquent {
 	 * @var string
 	 */
 	protected $table = 'fooditem_ingredient';
-	protected $appends = array('ingredient');
+	protected $appends = array('ingredient', 'measurement');
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -34,6 +34,16 @@ class FooditemingredientModel extends Eloquent {
 		}else{
 		$ingredient = FoodingredientModel::find($this->inid);
 		return $ingredient->name;
+		}
+	}
+
+	public function getMeasurementAttribute()
+	{
+		if($this->inid==0){
+		return '-';
+		}else{
+		$ingredient = FoodingredientModel::find($this->inid);
+		return $ingredient->measurement;
 		}
 	}
 }
