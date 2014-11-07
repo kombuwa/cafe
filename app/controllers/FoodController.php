@@ -113,7 +113,7 @@ class FoodController extends BaseController {
 		return FooditemingredientModel::create(Input::all());
 	}
 
-	public function deleteitem_ingredient($id)
+	public function deletefooditem_ingredient($id)
 	{
 		$item= FooditemingredientModel::find($id);
 		$item->delete();
