@@ -19,26 +19,9 @@
 	 ?>
 
      <!-- Angular -->
-    @include('admin.include.app.foodingredient')
+    @include('admin.include.app.foodstock')
 
     <div id="wrapper" ng-controller="ingredientController">
-
-        <!-- Dialog -->
-        <script type="text/ng-template" id="editDialog.html">
-        <div class="modal-header">
-            <h3 class="modal-title">Edit Ingredient!</h3>
-        </div>
-        <div class="modal-body">
-            
-            <b>Name:</b> <a href="#" editable-text="ingredient.name">@{{ingredient.name || 'no data'}}</a><br>
-            <b>Measurement:</b> <a href="#" editable-select="ingredient.measurement" e-ng-options="m.value as m.text for m in measurement">@{{ingredient.measurement || 'no data'}}</a><br>
-            <b>Description:</b> <a href="#" editable-textarea="ingredient.description" e-rows="7" e-cols="40">@{{ingredient.description||'no data'|characters:48}}</a><br>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-primary" ng-click="ok()">OK</button>
-            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-        </div>
-        </script>
 
         <!-- Navigation -->
 	@include('admin.include.nav')
