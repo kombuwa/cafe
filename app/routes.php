@@ -59,6 +59,16 @@ Route::group(array('before' => 'auth'), function(){
 	));
 });
 
+//  Route to the Food Stock page
+Route::group(array('before' => 'auth'), function(){
+	Route::get('/food/stock/', array(
+	    'as' => 'admin.foodstock',
+	    function() {
+	        return View::make('admin.foodstock')->with('title','Food Stock');
+	    }
+	));
+});
+
 /////////////////////////
 /*-- PRE AUTH ROUTS --*/
 ///////////////////////
