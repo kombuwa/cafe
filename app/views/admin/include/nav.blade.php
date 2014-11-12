@@ -74,7 +74,7 @@
 			
 			@if($user_access == 'admin' || $user_access == 'manager')
                         <li>
-                            <a href="tables.html"><i class="fa fa-book fa-fw"></i> Stock</a>
+                            <a href="{{ route('admin.foodstock') }}"><i class="fa fa-book fa-fw"></i> Stock</a>
                         </li>
                        	@endif
                        	
