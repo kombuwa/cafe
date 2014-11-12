@@ -120,4 +120,24 @@ class FoodController extends BaseController {
 		
 		return Response::json(['destroy'=>true]);
 	}
+
+	public function getstocks()
+	{
+		return FoodstockModel::all();
+	}
+	
+	public function poststock()
+	{
+		return FoodstockModel::create(Input::all());
+	}
+	
+	public function deletestock($id)
+	{
+	
+		$stock = FoodstockModel::find($id);
+		$stock->delete();
+		
+		
+		return Response::json(['destroy'=>true]);
+	}
 }
