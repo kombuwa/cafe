@@ -55,7 +55,7 @@
                     <textarea rows="3" class="form-control" ng-model="newStockCause"></textarea>
                 </div>
                 <div class="form-group input-group">
-                    <span class="input-group-addon">LKR</i>
+                    <span class="input-group-addon">Quantity</i>
                     </span>
                     <input type="number" placeholder="0.00" min="0.01" step="0.01" ng-model="newItemPrice" class="form-control">
                 </div>
@@ -71,7 +71,7 @@
                             
                             	<div class="row">
 				
-                                <div class="col-md-8">Food Ingredient</div>
+                                <div class="col-md-8">Food Stock</div>
                                 <div class="col-md-4"><input type="search" class="form-control input-sm" placeholder="Search" ng-model="search"></div>
                                 
                         	</div>
