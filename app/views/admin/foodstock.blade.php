@@ -59,7 +59,7 @@
                     </span>
                     <input type="number" placeholder="0.00" min="0.01" step="0.01" ng-model="newItemPrice" class="form-control">
                 </div>
-                <button class="btn btn-default" type="submit">Add Ingredient</button> <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i>
+                <button class="btn btn-default" type="submit">Add to Stock</button> <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i>
 			</div>
 			</div>
 		</form>	
