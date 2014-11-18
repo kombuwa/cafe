@@ -48,7 +48,7 @@
                                         <option value="out">Out</option>
                                     </select>
                                 </div>
-			</div>
+			</div>s
 			<div class="col-lg-6">
 				<div class="form-group">
                     <label>Cause</label>

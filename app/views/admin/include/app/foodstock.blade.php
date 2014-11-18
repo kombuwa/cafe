@@ -7,6 +7,10 @@
 	        	{ id:2, name :"Juice" },
 	        ];*/
 	        
+	        $http.get('/api/food/ingredients').success(function(ingredients){
+	        	$scope.ingredients = ingredients;
+	        });
+	        
 	        $http.get('/api/food/stocks').success(function(stocks){
 	        	$scope.stocks = stocks;
 	        });
