@@ -21,7 +21,7 @@
      <!-- Angular -->
     @include('admin.include.app.foodstock')
 
-    <div id="wrapper" ng-controller="ingredientController">
+    <div id="wrapper" ng-controller="stockController">
 
         <!-- Navigation -->
 	@include('admin.include.nav')
