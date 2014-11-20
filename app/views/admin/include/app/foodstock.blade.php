@@ -44,9 +44,9 @@
 
 
 	        $scope.selectingredient = function () {
-				if($scope.newIngredient!=null){
+				if($scope.newStockIngredient!=null){
 					//$scope.quantity = $scope.newIngredient.measurement;
-					$http.get('/api/food/ingredient/'+$scope.newIngredient+'/').success(function(ingredient){
+					$http.get('/api/food/ingredient/'+$scope.newStockIngredient+'/').success(function(ingredient){
 			        	$scope.quantity = ingredient.measurement;
 			        });
 				}else{
