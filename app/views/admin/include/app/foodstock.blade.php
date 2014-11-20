@@ -2,6 +2,7 @@
 	      myApp.controllers.stockController = function($scope, $http) {
 	        //Do Awesome Controller Stuff As Usual
 	        $scope.message = 'Food Stock!';
+	        $scope.quantity = 'quantity';
 	        /*$scope.categorys = [
 	        	{ id:1, name :"Soup" },
 	        	{ id:2, name :"Juice" },
@@ -40,6 +41,18 @@
 			        });
 		        });
 	        };
+
+
+	        $scope.selectingredient = function () {
+				if($scope.newIngredient!=null){
+					//$scope.quantity = $scope.newIngredient.measurement;
+					$http.get('/api/food/ingredient/'+$scope.newIngredient+'/').success(function(ingredient){
+			        	$scope.quantity = ingredient.measurement;
+			        });
+				}else{
+					$scope.quantity = 'Quantity';
+				}
+			}
 	        
 	      };
 	

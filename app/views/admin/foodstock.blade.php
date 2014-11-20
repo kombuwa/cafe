@@ -36,7 +36,7 @@
 			<div class="col-lg-6">
 				<div class="form-group">
                     <label>Food Ingredient</label>
-                    <select class="form-control" ng-model="newStockIngredient" ng-options="ingredient.id as ingredient.name for ingredient in ingredients" >
+                    <select class="form-control" ng-model="newStockIngredient" ng-options="ingredient.id as ingredient.name for ingredient in ingredients" ng-change="selectingredient()">
                         <option value="">Choose Ingredient</option>
                     </select>
                 </div>
@@ -55,7 +55,7 @@
                     <textarea rows="3" class="form-control" ng-model="newStockCause"></textarea>
                 </div>
                 <div class="form-group input-group">
-                    <span class="input-group-addon">Quantity</i>
+                    <span class="input-group-addon">@{{quantity}}</i>
                     </span>
                     <input type="number" placeholder="0.00" min="0.01" step="0.01" ng-model="newItemPrice" class="form-control">
                 </div>
