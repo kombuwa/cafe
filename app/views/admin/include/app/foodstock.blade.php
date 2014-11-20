@@ -12,9 +12,9 @@
 	        	$scope.ingredients = ingredients;
 	        });
 	        
-	        $http.get('/api/food/stocks').success(function(stocks){
+	        /*$http.get('/api/food/stocks').success(function(stocks){
 	        	$scope.stocks = stocks;
-	        });
+	        });*/
 	        
 	        $scope.addStock = function() {
 	        	var stock = {
