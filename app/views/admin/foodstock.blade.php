@@ -36,7 +36,7 @@
 			<div class="col-lg-6">
 				<div class="form-group">
                     <label>Food Ingredient</label>
-                    <select class="form-control" ng-model="newStockIngredient" ng-options="ingredient.id as ingredient.name for ingredient in Ingredients" >
+                    <select class="form-control" ng-model="newStockIngredient" ng-options="ingredient.id as ingredient.name for ingredient in ingredients" >
                         <option value="">Choose Ingredient</option>
                     </select>
                 </div>
@@ -48,7 +48,7 @@
                                         <option value="out">Out</option>
                                     </select>
                                 </div>
-			</div>s
+			</div>
 			<div class="col-lg-6">
 				<div class="form-group">
                     <label>Cause</label>
