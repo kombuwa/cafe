@@ -49,6 +49,9 @@
 	
 	      //Add A Dependency
 	      myApp.dependencies.push('ngResource');
+	      myApp.dependencies.push('truncate');
+	      myApp.dependencies.push('xeditable');
+	      myApp.dependencies.push('ui.bootstrap');
 	
 	      myApp.directives.myDirective = [function() {
 	        return function(scope, element, attrs){
