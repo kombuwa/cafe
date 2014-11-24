@@ -90,7 +90,7 @@
                                             <th>Type</th>
                                             <th>Cause</th>
                                             <th>Qty</th>
-                                            <th></th>
+                                            <!--<th></th>-->
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -100,10 +100,10 @@
                                             <td>@{{stock.type}}</td>
                                             <td>@{{stock.cause|characters:48}}</td>
                                             <td>@{{stock.qty}}</td>
-                                            <td><div align="right" >
+                                            <!--<td><div align="right" >
                                             <button class="btn btn-warning" ng-click="edit(stock.id)"><i class="fa fa-pencil-square-o"></i></button>
-                                            <a class="btn btn-danger" ng-click="deleteIngredient(stock.id)"><i class="fa fa-trash-o"></i></a>
-                                            </div></td>
+                                            <a class="btn btn-danger" ng-click="deleteStock(stock.id)"><i class="fa fa-trash-o"></i></a>
+                                            </div></td>-->
                                         </tr>
                                     </tbody>
                                 </table>
