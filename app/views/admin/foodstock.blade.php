@@ -86,21 +86,21 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Name</th>
-                                            <th>Description</th>
-                                            <th>Measurement</th>
+                                            <th>Type</th>
+                                            <th>Cause</th>
+                                            <th>Qty</th>
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr ng-repeat="ingredient in ingredients| filter:search">
-                                            <td>@{{ingredient.id}}</td>
-                                            <td>@{{ingredient.name}}</td>
-                                            <td>@{{ingredient.description|characters:48}}</td>
-                                            <td>@{{ingredient.measurement}}</td>
+                                        <tr ng-repeat="stock in stocks| filter:search">
+                                            <td>@{{stock.id}}</td>
+                                            <td>@{{stock.type}}</td>
+                                            <td>@{{stock.cause|characters:48}}</td>
+                                            <td>@{{stock.qty}}</td>
                                             <td><div align="right" >
-                                            <button class="btn btn-warning" ng-click="edit(ingredient.id)"><i class="fa fa-pencil-square-o"></i></button>
-                                            <a class="btn btn-danger" ng-click="deleteIngredient(ingredient.id)"><i class="fa fa-trash-o"></i></a>
+                                            <button class="btn btn-warning" ng-click="edit(stock.id)"><i class="fa fa-pencil-square-o"></i></button>
+                                            <a class="btn btn-danger" ng-click="deleteIngredient(stock.id)"><i class="fa fa-trash-o"></i></a>
                                             </div></td>
                                         </tr>
                                     </tbody>
