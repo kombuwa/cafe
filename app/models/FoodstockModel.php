@@ -31,7 +31,11 @@ class FoodstockModel extends Eloquent {
 
 	public function getIngredientAttribute()
 	{
-		//$item= FooditemModel::where('fcid', '=', $this->id)->firstOrFail();
-		return FoodingredientModel::where('id', '=', $this->inid)->firstOrFail()->name;
+		if($this->inid==0){
+		return '-';
+		}else{
+		$ingredient = FoodingredientModel::find($this->inid);
+		return $ingredient->name;
+		}
 	}
 }
