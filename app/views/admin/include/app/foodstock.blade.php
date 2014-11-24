@@ -22,7 +22,7 @@
 	        		name : $scope.newStockName,
 	        		type : $scope.newStockType,
 	        		cause : $scope.newStockCause,
-	        		qty : $scope.newStockQuantity,
+	        		qty : $scope.newQty,
 	        		isauto : 'no',
 	        	};
 	        	$scope.isAdd = 1;
