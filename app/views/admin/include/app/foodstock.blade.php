@@ -12,9 +12,9 @@
 	        	$scope.ingredients = ingredients;
 	        });
 	        
-	        /*$http.get('/api/food/stocks').success(function(stocks){
+	        $http.get('/api/food/stock').success(function(stocks){
 	        	$scope.stocks = stocks;
-	        });*/
+	        });
 	        
 	        $scope.addStock = function() {
 	        	var stock = {
@@ -28,7 +28,7 @@
 	        	$scope.isAdd = 1;
 	        	//$scope.categorys.push(category );
 	        	$http.post('/api/food/stock', stock).success(function(){
-		        	$http.get('/api/food/stocks').success(function(stocks){
+		        	$http.get('/api/food/stock').success(function(stocks){
 			        	$scope.stocks = stocks;
 			        	$scope.newStockName = "";
 			        	$scope.newStockCause = "";
@@ -41,7 +41,7 @@
 	        $scope.deleteStock = function(id) {
 
 	        	$http.delete('/api/food/stock/'+id+'/').success(function(){
-		        	$http.get('/api/food/stocks').success(function(stocks){
+		        	$http.get('/api/food/stock').success(function(stocks){
 			        	$scope.stocks = stocks;
 			        	$scope.newStockName = "";
 			        	$scope.isAdd = 0;
