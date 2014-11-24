@@ -18,7 +18,11 @@
 	        
 	        $scope.addStock = function() {
 	        	var stock = {
-	        		name : $scope.newStockName
+	        		name : $scope.newStockName,
+	        		type : $scope.newStockType,
+	        		cause : $scope.newStockCause,
+	        		qty : $scope.newStockQuantity,
+	        		isauto : 'no',
 	        	};
 	        	$scope.isAdd = 1;
 	        	//$scope.categorys.push(category );
@@ -26,6 +30,8 @@
 		        	$http.get('/api/food/stocks').success(function(stocks){
 			        	$scope.stocks = stocks;
 			        	$scope.newStockName = "";
+			        	$scope.newStockCause = "";
+			        	$scope.newStockQuantity = "";
 			        	$scope.isAdd = 0;
 			        });
 		        });
