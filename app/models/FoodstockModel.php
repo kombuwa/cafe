@@ -9,7 +9,7 @@ class FoodstockModel extends Eloquent {
 	 * @var string
 	 */
 	protected $table = 'foodstock';
-	//protected $appends = array('items');
+	protected $appends = array('ingredient');
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -29,4 +29,9 @@ class FoodstockModel extends Eloquent {
 			'qty' => 'required|numeric',
 		);
 
+	public function getIngredientAttribute()
+	{
+		//$item= FooditemModel::where('fcid', '=', $this->id)->firstOrFail();
+		return FoodingredientModel::where('id', '=', $this->inid)->firstOrFail()->name;
+	}
 }

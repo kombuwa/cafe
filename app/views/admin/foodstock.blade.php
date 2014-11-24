@@ -86,6 +86,7 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
+                                            <th>Ingrediance</th>
                                             <th>Type</th>
                                             <th>Cause</th>
                                             <th>Qty</th>
@@ -95,6 +96,7 @@
                                     <tbody>
                                         <tr ng-repeat="stock in stocks| filter:search">
                                             <td>@{{stock.id}}</td>
+                                            <td>@{{stock.ingredient}}</td>
                                             <td>@{{stock.type}}</td>
                                             <td>@{{stock.cause|characters:48}}</td>
                                             <td>@{{stock.qty}}</td>
