@@ -57,7 +57,7 @@
                 <div class="form-group input-group">
                     <span class="input-group-addon">@{{quantity}}</i>
                     </span>
-                    <input type="number" placeholder="0.00" min="0.01" step="0.01" ng-model="newItemPrice" class="form-control">
+                    <input type="number" placeholder="0.000" min="0.001" step="0.001" ng-model="newQty" class="form-control">
                 </div>
                 <button class="btn btn-default" type="submit">Add to Stock</button> <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i>
 			</div>

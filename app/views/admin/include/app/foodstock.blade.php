@@ -18,6 +18,7 @@
 	        
 	        $scope.addStock = function() {
 	        	var stock = {
+	        		inid : $scope.newStockIngredient,
 	        		name : $scope.newStockName,
 	        		type : $scope.newStockType,
 	        		cause : $scope.newStockCause,
