@@ -69,6 +69,27 @@ Route::group(array('before' => 'auth'), function(){
 	));
 });
 
+
+//  Route to the new Order page
+Route::group(array('before' => 'auth'), function(){
+	Route::get('/order/new/', array(
+	    'as' => 'admin.ordernew',
+	    function() {
+	        return View::make('admin.ordernew')->with('title','New Order');
+	    }
+	));
+});
+
+//  Route to the Order List page
+Route::group(array('before' => 'auth'), function(){
+	Route::get('/order/list/', array(
+	    'as' => 'admin.orderlist',
+	    function() {
+	        return View::make('admin.orderlist')->with('title','Order List');
+	    }
+	));
+});
+
 /////////////////////////
 /*-- PRE AUTH ROUTS --*/
 ///////////////////////
