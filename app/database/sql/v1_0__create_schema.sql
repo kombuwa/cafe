@@ -130,3 +130,16 @@ description VARCHAR(255),
 created_at TIMESTAMP,
 updated_at TIMESTAMP
 )engine=innodb;
+
+/* Create Order Item Table */
+DROP TABLE IF EXISTS orderitem;
+CREATE TABLE orderitem 
+(
+id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+orid MEDIUMINT,
+fiid MEDIUMINT,
+qty TINYINT,
+isreq VARCHAR(5),
+created_at TIMESTAMP,
+updated_at TIMESTAMP
+)engine=innodb;
