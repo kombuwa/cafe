@@ -119,14 +119,13 @@ created_at TIMESTAMP,
 updated_at TIMESTAMP
 )engine=innodb;
 
-/* Create Order Table */
-DROP TABLE IF EXISTS order;
-CREATE TABLE order 
+/* Create Orders Table */
+DROP TABLE IF EXISTS orders;
+CREATE TABLE orders 
 (
 id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-inid MEDIUMINT,
-rep VARCHAR(50),
-tabel VARCHAR(10),
+agent VARCHAR(50),
+location VARCHAR(50),
 description VARCHAR(255),
 created_at TIMESTAMP,
 updated_at TIMESTAMP
