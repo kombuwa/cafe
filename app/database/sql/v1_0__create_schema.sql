@@ -113,8 +113,21 @@ id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 inid MEDIUMINT,
 isauto VARCHAR(5),
 type VARCHAR(5),
-reason VARCHAR(255),
+cause VARCHAR(255),
 qty DECIMAL(7,3),
+created_at TIMESTAMP,
+updated_at TIMESTAMP
+)engine=innodb;
+
+/* Create Order Table */
+DROP TABLE IF EXISTS order;
+CREATE TABLE order 
+(
+id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+inid MEDIUMINT,
+rep VARCHAR(50),
+tabel VARCHAR(10),
+description VARCHAR(255),
 created_at TIMESTAMP,
 updated_at TIMESTAMP
 )engine=innodb;
