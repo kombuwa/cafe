@@ -60,13 +60,13 @@
                         @endif
                         
                         <li>
-                            <a href="#"><i class="fa fa-shopping-cart fa-fw"></i> Oder<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-shopping-cart fa-fw"></i> Order <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">New Oder</a>
+                                    <a href="{{ route('admin.ordernew') }}">New Order </a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">Oder List</a>
+                                    <a href="{{ route('admin.orderlist') }}">Order List</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
