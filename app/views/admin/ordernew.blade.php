@@ -29,43 +29,23 @@
 	<!-- Content Top -->
 	@include('admin.include.cont_top')
         
-                    <div class="panel panel-default">
-		<div class="panel-body">
-		<form ng-submit="addStock()">
-			<div class="row">
-			<div class="col-lg-6">
-				<div class="form-group">
-                    <label>Food Ingredient</label>
-                    <select class="form-control" ng-model="newStockIngredient" ng-options="ingredient.id as ingredient.name for ingredient in ingredients" ng-change="selectingredient()">
+        <div class="row show-grid">
+            <form ng-submit="addIngredient()">
+                <div class="col-xs-12 col-md-8">
+                    <select class="form-control" ng-model="newIngredient" ng-options="ingredient.id as ingredient.name for ingredient in ingredients" ng-change="selectingredient()" >
                         <option value="">Choose Ingredient</option>
-                    </select>
+                    </select><br>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon">@{{quantity}}</i>
+                        </span>
+                        <input type="number" placeholder="0.000" min="0.001" step="0.001" ng-model="newQty" class="form-control">
+                    </div>
                 </div>
-                                <div class="form-group">
-                                    <label>Type</label>
-                                    <select class="form-control" ng-model="newStockType">
-                                    	<option value="">Choose Type</option>
-                                        <option value="in">In</option>
-                                        <option value="out">Out</option>
-                                    </select>
-                                </div>
-			</div>
-			<div class="col-lg-6">
-				<div class="form-group">
-                    <label>Cause</label>
-                    <textarea rows="3" class="form-control" ng-model="newStockCause"></textarea>
+                <div class="col-xs-6 col-md-4" style="height:125px;"><button class="btn btn-default" type="submit">Add Ingredient</button>
+                    <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i>
                 </div>
-                <div class="form-group input-group">
-                    <span class="input-group-addon">@{{quantity}}</i>
-                    </span>
-                    <input type="number" placeholder="0.000" min="0.001" step="0.001" ng-model="newQty" class="form-control">
-                </div>
-                <button class="btn btn-default" type="submit">Add to Stock</button> <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i>
-			</div>
-			</div>
-		</form>	
-		</div>
-		</div>
-		
+            </form>
+        </div>
                 
     	<!-- Content bottom -->
 	@include('admin.include.cont_bot')
