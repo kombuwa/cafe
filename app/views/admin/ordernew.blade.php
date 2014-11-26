@@ -33,9 +33,8 @@
             <form ng-submit="addIngredient()">
                 <div class="col-xs-12 col-md-8">
                     <input class="form-control" ng-model="newOrderLocation" placeholder="Location" required><br>
-                    <div class="form-group input-group">
-                        <textarea rows="1" class="form-control" style="width:100%; height: 34px;" placeholder="Description" ng-model="newOrderDescription"></textarea>
-                    </div>
+                    <textarea rows="1" class="form-control" style="width: 100%; height: 34px;" placeholder="Description" ng-model="newOrderDescription"></textarea>
+
                 </div>
                 <div class="col-xs-6 col-md-4" style="height:125px;"><button class="btn btn-default" type="submit">Place Order</button>
                     <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i>
