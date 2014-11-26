@@ -30,10 +30,10 @@
 	@include('admin.include.cont_top')
         
         <div class="row show-grid">
-            <form ng-submit="addIngredient()">
+            <form>
                 <div class="col-xs-12 col-md-8">
-                    <input class="form-control" ng-model="newOrderLocation" placeholder="Location" required><br>
-                    <textarea class="input-block-level" placeholder="Description" ng-model="newOrderDescription"></textarea>
+                    <input class="form-control" placeholder="Location" required><br>
+                    <input class="form-control" placeholder="Description" required>
 
                 </div>
                 <div class="col-xs-6 col-md-4" style="height:125px;"><button class="btn btn-default" type="submit">Place Order</button>
