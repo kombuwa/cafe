@@ -32,13 +32,9 @@
         <div class="row show-grid">
             <form ng-submit="addIngredient()">
                 <div class="col-xs-12 col-md-8">
-                    <select class="form-control" ng-model="newIngredient" ng-options="ingredient.id as ingredient.name for ingredient in ingredients" ng-change="selectingredient()" >
-                        <option value="">Choose Ingredient</option>
-                    </select><br>
+                    <input class="form-control" ng-model="newOrderLocation" placeholder="Location" required><br>
                     <div class="form-group input-group">
-                        <span class="input-group-addon">@{{quantity}}</i>
-                        </span>
-                        <input type="number" placeholder="0.000" min="0.001" step="0.001" ng-model="newQty" class="form-control">
+                        <textarea rows="3" class="form-control" placeholder="Description" ng-model="newOrderDescription"></textarea>
                     </div>
                 </div>
                 <div class="col-xs-6 col-md-4" style="height:125px;"><button class="btn btn-default" type="submit">Add Ingredient</button>
