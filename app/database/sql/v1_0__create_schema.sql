@@ -143,3 +143,28 @@ isreq VARCHAR(5),
 created_at TIMESTAMP,
 updated_at TIMESTAMP
 )engine=innodb;
+
+/* Create Order request Table */
+DROP TABLE IF EXISTS orderrequest;
+CREATE TABLE orderrequest
+(
+id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+orid MEDIUMINT,
+location VARCHAR(50),
+provider VARCHAR(50),
+created_at TIMESTAMP,
+updated_at TIMESTAMP
+)engine=innodb;
+
+/* Create Order request item Table */
+DROP TABLE IF EXISTS orderrequest_item;
+CREATE TABLE orderrequest_item
+(
+id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+reid MEDIUMINT,
+oiid MEDIUMINT,
+fiid MEDIUMINT,
+qty TINYINT,
+created_at TIMESTAMP,
+updated_at TIMESTAMP
+)engine=innodb;
