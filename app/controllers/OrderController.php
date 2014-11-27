@@ -20,8 +20,8 @@ class OrderController extends BaseController {
 
 		$today = date("Y-m-d H:i:s");
 		$data = array(
-			'location' => Input::get('givenname'),
-			'description' => Input::get('surname'),
+			'location' => Input::get('location'),
+			'description' => Input::get('description'),
 		);
 		
 		//set validation rules
