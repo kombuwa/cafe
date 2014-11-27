@@ -11,7 +11,44 @@ class OrderController extends BaseController {
 
 	public function new()
 	{
-		return View::make('hello');
+		//check user already loged in
+		if(Auth::check())
+		{
+		
+			$agent = Auth::user()->username;
+		}
+
+		$today = date("Y-m-d H:i:s");
+		$data = array(
+			'location' => Input::get('givenname'),
+			'description' => Input::get('surname'),
+		);
+		
+		//set validation rules
+		$rules = array(
+			'location' => 'required|max:50',
+			'description' => 'max:50',
+		);
+
+
+
+		//run validation check
+		$validator = Validator::make($data,$rules);
+		if($validator->fails())
+		{
+			return Redirect::back()->withInput()->withErrors($validator );
+		}else{
+			//create new order
+			$order = new OrderModel;
+			$order->agent = $agent;
+			$order->location = Input::get('location');
+			$order->description = Input::get('description');
+
+			
+			$order->save();
+		}
+		
+		return Redirect::to('login')->with('success', 'You have successfuly created new Order.'.$order->id);
 	}
 
 }

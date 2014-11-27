@@ -23,8 +23,8 @@ class OrderModel extends Eloquent {
 	
 	public static $rules = array(
 			'agent' => 'required|alpha_num|max:50',
-			'location' => 'alpha_num|max:50',
-			'description' => 'alpha_num|max:255',
+			'location' => 'required|max:50',
+			'description' => 'max:255',
 		);
 
 }
