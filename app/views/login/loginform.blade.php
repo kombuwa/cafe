@@ -68,7 +68,7 @@
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <div class="panel-body">
-                        <?php echo '<form role="form" method="post" action="'.URL::to('/order/new/').'">'; ?>
+                        <?php echo '<form role="form" method="post" action="'.URL::to('login').'">'; ?>
                             <fieldset>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Username" id="username" name="username" type="text" autofocus>
