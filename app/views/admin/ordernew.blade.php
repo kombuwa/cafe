@@ -30,11 +30,11 @@
 	@include('admin.include.cont_top')
         
         <div class="row show-grid">
-            <form>
+             <?php echo '<form role="form" method="post" action="'.URL::to('login').'">'; ?>
                 <div class="col-xs-12 col-md-8">
                     <input class="form-control" placeholder="Location" required><br>
-                    <input class="form-control" placeholder="Description" required>
-
+                    <input class="form-control" placeholder="Description" required><br>
+                    <br>
                 </div>
                 <div class="col-xs-6 col-md-4" style="height:125px;"><button class="btn btn-default" type="submit">Place Order</button>
                     <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i>
