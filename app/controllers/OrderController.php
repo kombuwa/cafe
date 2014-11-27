@@ -9,7 +9,7 @@ class OrderController extends BaseController {
 	*/
         public $restful = true;
 
-	public function new()
+	public function newOrder()
 	{
 		//check user already loged in
 		if(Auth::check())

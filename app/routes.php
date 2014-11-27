@@ -78,7 +78,7 @@ Route::group(array('before' => 'auth'), function(){
 	        return View::make('admin.ordernew')->with('title','New Order');
 	    }
 	));
-	Route::post('/order/new/', 'OrderController@new');
+	Route::post('/order/new/', 'OrderController@newOrder');
 });
 
 //  Route to the Order List page
