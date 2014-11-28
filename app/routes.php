@@ -81,6 +81,11 @@ Route::group(array('before' => 'auth'), function(){
 	Route::post('/order/new/', 'OrderController@newOrder');
 });
 
+//  Route to the edit Order page
+Route::group(array('before' => 'auth'), function(){
+	Route::get('order/edit/{id}', 'OrderController@editOrder');
+});
+
 //  Route to the Order List page
 Route::group(array('before' => 'auth'), function(){
 	Route::get('/order/list/', array(
@@ -90,6 +95,7 @@ Route::group(array('before' => 'auth'), function(){
 	    }
 	));
 });
+
 
 /////////////////////////
 /*-- PRE AUTH ROUTS --*/
