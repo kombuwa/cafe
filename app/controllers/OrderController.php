@@ -51,4 +51,12 @@ class OrderController extends BaseController {
 		return Redirect::to('login')->with('success', 'You have successfuly created new Order.'.$order->id);
 	}
 
+
+	 public function editOrder($id)
+    {
+        $user = OrderModel::find($id);
+
+        return View::make('admin.orderedit', array('user' => $user));
+    }
+
 }
