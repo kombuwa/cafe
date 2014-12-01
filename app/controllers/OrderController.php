@@ -52,7 +52,7 @@ class OrderController extends BaseController {
 	}
 
 
-	 public function editOrder($id)
+	public function editOrder($id)
     {
         $order = OrderModel::find($id);
 
