@@ -83,7 +83,7 @@ Route::group(array('before' => 'auth'), function(){
 
 //  Route to the edit Order page
 Route::group(array('before' => 'auth'), function(){
-	Route::get('order/edit/{id}', 'OrderController@editOrder');
+	Route::get('order/edit/{id}', 'OrderController@editOrder')->with('title','Order Edit');
 });
 
 //  Route to the Order List page

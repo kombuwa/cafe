@@ -48,7 +48,7 @@ class OrderController extends BaseController {
 			$order->save();
 		}
 		
-		return Redirect::to('login')->with('success', 'You have successfuly created new Order.'.$order->id);
+		return Redirect::to('order/edit/'.$order->id)->with('success', 'You have successfuly created new Order.'.$order->id);
 	}
 
 
