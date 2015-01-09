@@ -36,7 +36,7 @@
         @{{order.description}} <br>
         <tabset>
             <tab ng-repeat="category in categorys"
-                 heading="{{category.name}}" >
+                 heading="@{{category.name}}" >
                 <div >
                     <div>
                         test
