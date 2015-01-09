@@ -10,7 +10,7 @@
 	        $http.get('/api/food/categorys').success(function(categorys){
 	        	$scope.categorys = categorys;
 	        });
-	        
+
 	        $http.get('/api/order/details/'+searchId+'').success(function(order){
 	        	$scope.order = order;
 	        });
@@ -24,6 +24,9 @@
 	
 	      //Add A Dependency
 	      myApp.dependencies.push('ngResource');
+	      myApp.dependencies.push('truncate');
+	      myApp.dependencies.push('xeditable');
+	      myApp.dependencies.push('ui.bootstrap');
 	
 	      myApp.directives.myDirective = [function() {
 	        return function(scope, element, attrs){
