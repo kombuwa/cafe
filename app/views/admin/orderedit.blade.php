@@ -31,7 +31,7 @@
         
         <div class="row show-grid">
              <?php echo '<form role="form" method="post" action="'.URL::to('/order/new/').'">'; ?>
-                @{{ingredient.agent}}
+               agent: @{{order.agent}}
                 <div class="col-xs-12 col-md-8">
                     <input class="form-control" placeholder="Location" id="location" name="location" type="text" required><br>
                     <input class="form-control" placeholder="Description"  id="description" name="description" type="text"><br>
