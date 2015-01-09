@@ -18,7 +18,7 @@ App::missing(function($exception)
 
 Route::get('/', function()
 {
-        if(Auth::check())
+    if(Auth::check())
 	{
 		return View::make('admin.index')->with('title','Cafe Ceylon Admin Panel');
 	}
@@ -202,4 +202,7 @@ Route::group(array('before' => 'auth'), function(){
 	Route::post('api/food/stock/', 'FoodController@poststock');
 	// API to delete Food stock1
 	Route::delete('api/food/stock/{id}', 'FoodController@deletestock');
+
+	// API to get Order
+	Route::get('api/order/details/{id}', 'OrderController@getitem');
 });

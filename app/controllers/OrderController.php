@@ -54,9 +54,14 @@ class OrderController extends BaseController {
 
 	public function editOrder($id)
     {
-        $order = OrderModel::find($id);
-
-        return View::make('admin.orderedit', array('order' => $order))->with('title','Edit Order');
+        //$order = OrderModel::find($id);
+    	//return View::make('admin.orderedit', array('order' => $order))->with('title','Edit Order');
+        return View::make('admin.orderedit')->with('searchId', $id)->with('title','Edit Order');
     }
+
+    public function getitem($id)
+	{
+		return FooditemModel::find($id);
+	}
 
 }
