@@ -1,5 +1,5 @@
  	<script>
-	      myApp.controllers.categoryController = function($scope, $http) {
+	      myApp.controllers.orderController = function($scope, $http) {
 	        //Do Awesome Controller Stuff As Usual
 	        $scope.message = 'Order Edit!';
 	        /*$scope.categorys = [

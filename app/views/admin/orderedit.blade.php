@@ -21,7 +21,7 @@
      <!-- Angular -->
     @include('admin.include.app.orderedit')
 
-    <div id="wrapper" ng-controller="stockController">
+    <div id="wrapper" ng-controller="orderController">
 
         <!-- Navigation -->
 	@include('admin.include.nav')
