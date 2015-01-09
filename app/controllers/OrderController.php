@@ -61,7 +61,7 @@ class OrderController extends BaseController {
 
     public function getitem($id)
 	{
-		return FooditemModel::find($id);
+		return OrderModel::find($id);
 	}
 
 }

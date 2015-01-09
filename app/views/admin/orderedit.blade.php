@@ -31,6 +31,7 @@
         <script type="text/javascript">
             var searchId = {{ $searchId }};
         </script>
+        Agent: @{{order.agent}}
         <div class="row show-grid">
              <?php echo '<form role="form" method="post" action="'.URL::to('/order/new/').'">'; ?>
                 <div class="col-xs-12 col-md-8">
