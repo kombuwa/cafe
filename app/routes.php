@@ -171,6 +171,8 @@ Route::group(array('before' => 'auth'), function(){
 	Route::get('api/food/item/{id}', 'FoodController@getitem');
 	// API to get Food Items
 	Route::get('api/food/items/', 'FoodController@getitems');
+	// API to get Food Items by category
+	Route::get('api/food/itemsbycategory/{fcid}', 'FoodController@getitemsbycategory');
 	// API to add Food Item
 	Route::post('api/food/item/', 'FoodController@postitem');
 	// API to update Food Item

@@ -45,7 +45,11 @@ class FoodController extends BaseController {
 	{
 		return FooditemModel::all();
 	}
-	
+	public function getitemsbycategory($fcid)
+	{
+		return FooditemModel::where('fcid', '=', $fcid)->all();
+	}
+
 	public function postitem()
 	{
 		return FooditemModel::create(Input::all());

@@ -15,6 +15,12 @@
 	        	$scope.order = order;
 	        });
 	        
+	        $scope.getFoodItem = function(id) {
+
+	        	$http.get('/api/food/itemsbycategory/'+id+'').success(function(items){
+		        	$scope.items = items;
+		        });
+	        };
 	        
 	      };
 	

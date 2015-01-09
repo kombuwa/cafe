@@ -36,10 +36,12 @@
         @{{order.description}} <br>
         <tabset>
             <tab ng-repeat="category in categorys"
-                 heading="@{{category.name}}" >
+                 heading="@{{category.name}}" select="getFoodItem(category.id)">
                 <div >
                     <div>
-                        test
+                        <div ng-repeat="item in items">
+                            @{{item.name}}
+                        </div>
                     </div>
                 </div>     
             </tab>
