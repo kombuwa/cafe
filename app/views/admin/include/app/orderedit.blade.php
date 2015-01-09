@@ -7,7 +7,7 @@
 	        	{ id:2, name :"Juice" },
 	        ];*/
 	        
-	        $http.get('api/order/details/'+searchId+'').success(function(order){
+	        $http.get('/api/order/details/'+searchId+'').success(function(order){
 	        	$scope.order = order;
 	        });
 	        
