@@ -7,6 +7,10 @@
 	        	{ id:2, name :"Juice" },
 	        ];*/
 	        
+	        $http.get('/api/food/categorys').success(function(categorys){
+	        	$scope.categorys = categorys;
+	        });
+	        
 	        $http.get('/api/order/details/'+searchId+'').success(function(order){
 	        	$scope.order = order;
 	        });

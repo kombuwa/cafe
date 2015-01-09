@@ -31,7 +31,19 @@
         <script type="text/javascript">
             var searchId = {{ $searchId }};
         </script>
-        Agent: @{{order.agent}}
+        Agent: @{{order.agent}} <br>
+        Tabel: @{{order.location}} <br>
+        @{{order.description}} <br>
+        <tabset>
+            <tab ng-repeat="category in categorys"
+                 heading="{{category.name}}" >
+                <div >
+                    <div>
+                        test
+                    </div>
+                </div>     
+            </tab>
+        </tabset>
         <div class="row show-grid">
              <?php echo '<form role="form" method="post" action="'.URL::to('/order/new/').'">'; ?>
                 <div class="col-xs-12 col-md-8">
