@@ -47,7 +47,7 @@ class FoodController extends BaseController {
 	}
 	public function getitemsbycategory($fcid)
 	{
-		return FooditemModel::where('fcid', '=', $fcid)->all();
+		return FooditemModel::where('fcid', '=', $fcid)->get();
 	}
 
 	public function postitem()
