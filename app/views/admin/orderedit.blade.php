@@ -51,7 +51,20 @@
                 <div class="col-xs-12 col-md-8">
                     French Onion Soup 
                 </div>
-                <div class="col-xs-6 col-md-4" style="height:125px;"><button class="btn btn-default" type="submit">+</button><input class="form-control" placeholder="Location" id="location" name="location" type="text" required><button class="btn btn-default" type="submit">-</button>
+                <div class="col-xs-6 col-md-4" style="height:125px;">
+                	<div class="input-group">
+			          <span class="input-group-btn">
+			              	<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+			                  	<span class="glyphicon glyphicon-minus"></span>
+			              	</button>
+			          </span>
+			          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+			          <span class="input-group-btn">
+			              	<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+			                  	<span class="glyphicon glyphicon-plus"></span>
+			              	</button>
+			          </span>
+				    </div>
                 </div>
             </div>
         </div>
