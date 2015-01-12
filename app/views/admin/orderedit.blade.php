@@ -51,8 +51,7 @@
                 <div class="col-xs-12 col-md-8">
                     French Onion Soup 
                 </div>
-                <div class="col-xs-6 col-md-4" style="height:125px;"><button class="btn btn-default" type="submit">Place Order</button>
-                    <button class="btn btn-default" type="submit">+</button><input class="form-control" placeholder="Location" id="location" name="location" type="text" required><button class="btn btn-default" type="submit">-</button>
+                <div class="col-xs-6 col-md-4" style="height:125px;"><button class="btn btn-default" type="submit">+</button><input class="form-control" placeholder="Location" id="location" name="location" type="text" required><button class="btn btn-default" type="submit">-</button>
                 </div>
             </div>
         </div>
