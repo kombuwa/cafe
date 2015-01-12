@@ -39,7 +39,7 @@
                  heading="@{{category.name}}" select="getFoodItem(category.id)">
                 <div >
                     <div>
-                        <div ng-repeat="item in items" class="label label-primary">
+                        <div ng-repeat="item in items" class="label-lg label-primary">
                             @{{item.name}}
                         </div>
                     </div>
