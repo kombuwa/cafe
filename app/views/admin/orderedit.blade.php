@@ -38,7 +38,7 @@
             <tab ng-repeat="category in categorys"
                  heading="@{{category.name}}" select="getFoodItem(category.id)">
                 <div >
-                    <div style="padding-top:5px;">
+                    <div style="padding-top:7px;">
                         <div ng-repeat="item in items" class="label label-primary" style="margin: 5px;
     padding: 10px;" >
                             @{{item.name}}
