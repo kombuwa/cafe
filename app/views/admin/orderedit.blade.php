@@ -40,7 +40,9 @@
                 <div >
                     <div>
                         <div ng-repeat="item in items">
+                        	<a class="btn btn-info btn-circle text-uppercase" href="#">
                             @{{item.name}}
+                            </a>
                         </div>
                     </div>
                 </div>     
