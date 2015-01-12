@@ -38,7 +38,7 @@
             <tab ng-repeat="category in categorys"
                  heading="@{{category.name}}" select="getFoodItem(category.id)">
                 <div >
-                    <div style="padding-top:7px;">
+                    <div style="padding-top:10px;">
                         <div ng-repeat="item in items" class="label label-primary" style="margin: 5px;
     padding: 10px;" >
                             @{{item.name}}
@@ -60,7 +60,7 @@
 			                  	<span class="glyphicon glyphicon-minus"></span>
 			              	</button>
 			          </span>
-			          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="3" style="width: 80px;">
+			          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="3" style="width: 50px;">
 			          <span class="input-group-btn">
 			              	<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
 			                  	<span class="glyphicon glyphicon-plus"></span>
