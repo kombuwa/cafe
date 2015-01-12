@@ -47,15 +47,14 @@
             </tab>
         </tabset>
         <div class="row show-grid">
-             <?php echo '<form role="form" method="post" action="'.URL::to('/order/new/').'">'; ?>
+            <div class="col-xs-12 col-md-8">
                 <div class="col-xs-12 col-md-8">
-                    <input class="form-control" placeholder="Location" id="location" name="location" type="text" required><br>
-                    <input class="form-control" placeholder="Description"  id="description" name="description" type="text"><br>
+                    French Onion Soup 
                 </div>
                 <div class="col-xs-6 col-md-4" style="height:125px;"><button class="btn btn-default" type="submit">Place Order</button>
-                    <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i>
+                    <button class="btn btn-default" type="submit">+</button><input class="form-control" placeholder="Location" id="location" name="location" type="text" required><button class="btn btn-default" type="submit">-</button>
                 </div>
-            </form>
+            </div>
         </div>
                 
     	<!-- Content bottom -->
