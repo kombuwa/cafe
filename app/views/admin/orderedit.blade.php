@@ -51,7 +51,7 @@
                 <div class="col-xs-12 col-md-8">
                     French Onion Soup 
                 </div>
-                <div class="col-xs-6 col-md-4" style="height:125px;">
+                <div class="col-xs-6 col-md-4">
                 	<div class="input-group">
 			          <span class="input-group-btn">
 			              	<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
