@@ -59,7 +59,7 @@
 			                  	<span class="glyphicon glyphicon-minus"></span>
 			              	</button>
 			          </span>
-			          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+			          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="3" style="width: 80px;">
 			          <span class="input-group-btn">
 			              	<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
 			                  	<span class="glyphicon glyphicon-plus"></span>
