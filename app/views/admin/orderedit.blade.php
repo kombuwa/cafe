@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="col-xs-12 col-md-8">
-                    Vegi Roll
+                    Vegi Roll <a class="btn btn-danger" ng-click="deleteIngredient(ingredient.id)"><i class="fa fa-trash-o"></i></a>
                 </div>
                 <div class="col-xs-6 col-md-4">
                 	<div class="input-group">
