@@ -59,9 +59,25 @@ class OrderController extends BaseController {
         return View::make('admin.orderedit')->with('searchId', $id)->with('title','Edit Order');
     }
 
-    public function getitem($id)
+    public function getorder($id)
 	{
 		return OrderModel::find($id);
+	}
+
+	public function postitem()
+	{
+		return OrderitemModel::create(Input::all());
+	}
+
+	public function putitem($id)
+	{
+		FooditemModel::find($id)->update(Input::all());
+		return Response::json(['success'=>true]);
+	}
+	
+	public function getitems($id)
+	{
+		return FooditemModel::where('orid', '=', $id)->get();
 	}
 
 }
