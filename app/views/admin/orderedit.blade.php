@@ -51,7 +51,7 @@
             <div class="col-xs-12 col-md-8">
 
                 <div class="col-xs-12 col-md-8">
-                    French Onion Soup 
+                    French Onion Soup <a class="btn btn-danger" ng-click="deleteIngredient(ingredient.id)"><i class="fa fa-trash-o"></i></a>
                 </div>
                 <div class="col-xs-6 col-md-4">
                 	<div class="input-group">
