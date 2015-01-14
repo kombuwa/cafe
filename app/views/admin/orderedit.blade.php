@@ -40,7 +40,7 @@
                 <div >
                     <div style="padding-top:10px;">
                         <div ng-repeat="item in items" class="label label-primary" style="margin: 5px;
-    padding: 10px;" >
+    padding: 10px;" ng-click="addItem(item.id, 'text1');" >
                             @{{item.name}}
                         </div>
                     </div>

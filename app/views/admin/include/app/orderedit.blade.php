@@ -22,6 +22,22 @@
 		        });
 	        };
 	        
+	        $scope.addItem = function(fiid, orid) {
+	        	var item = {
+	        		fiid : fiid,
+	        		orid : orid,
+	        		qty : 1,
+	        	};
+	        	$scope.isAdd = 1;
+	        	//$scope.categorys.push(category );
+	        	$http.post('/api/order/Item/', item).success(function(){
+		        	$http.get('/api/order/items/'+orid+'').success(function(items){
+			        	$scope.items = items;
+			        	$scope.isAdd = 0;
+			        });
+		        });
+	        };
+
 	      };
 	
 	      myApp.config.push([function() {
