@@ -66,7 +66,7 @@ class OrderController extends BaseController {
 
 	public function postitem()
 	{
-		//return OrderitemModel::create(Input::all());
+		return OrderitemModel::create(Input::all());
 	}
 
 	public function putitem($id)
