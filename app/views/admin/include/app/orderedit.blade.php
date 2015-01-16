@@ -36,7 +36,7 @@
 			        	$scope.isAdd = 0;
 			        });
 		        });*/
- 				$http.post('http://system.cafeceylon.lk/api/order/Item?fiid=1&orid=2&qty=3').success(function(){
+ 				$http.post('http://system.cafeceylon.lk/api/order/Item?fiid='+fiid+'&orid=2&qty=1').success(function(){
 		        	$http.get('/api/order/items/'+orid+'').success(function(items){
 			        	$scope.items = items;
 			        	$scope.isAdd = 0;
