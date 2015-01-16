@@ -23,7 +23,7 @@
 	        };
 	        
 	        $scope.addItem = function(fiid, orid) {
-	        	var item = {
+	        	/*var item = {
 	        		fiid : fiid,
 	        		orid : orid,
 	        		qty : 1,
@@ -31,6 +31,12 @@
 	        	$scope.isAdd = 1;
 	        	//$scope.categorys.push(category );
 	        	$http.post('/api/order/Item/', item).success(function(){
+		        	$http.get('/api/order/items/'+orid+'').success(function(items){
+			        	$scope.items = items;
+			        	$scope.isAdd = 0;
+			        });
+		        });*/
+ 				$http.post('http://system.cafeceylon.lk/api/order/Item?fiid=1&orid=2&qty=3').success(function(){
 		        	$http.get('/api/order/items/'+orid+'').success(function(items){
 			        	$scope.items = items;
 			        	$scope.isAdd = 0;
