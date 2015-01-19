@@ -50,44 +50,26 @@
         <div class="row show-grid">
             <div class="col-xs-12 col-md-8">
 
-                <div class="col-xs-12 col-md-8">
-                    French Onion Soup <a class="btn btn-danger" ng-click="deleteIngredient(ingredient.id)"><i class="fa fa-trash-o"></i></a>
-                </div>
-                <div class="col-xs-6 col-md-4">
-                	<div class="input-group">
-			          <span class="input-group-btn">
-			              	<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-			                  	<span class="glyphicon glyphicon-minus"></span>
-			              	</button>
-			          </span>
-			          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="3" >
-			          <span class="input-group-btn">
-			              	<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-			                  	<span class="glyphicon glyphicon-plus"></span>
-			              	</button>
-			          </span>
-				    </div>
+                <div ng-repeat="orderitem in orderitems">
+                    <div class="col-xs-12 col-md-8">
+                         @{{orderitem.item}} <a class="btn btn-danger" ng-click="deleteItem(item.id)"><i class="fa fa-trash-o"></i></a>
+                    </div>
+                    <div class="col-xs-6 col-md-4">
+                    	<div class="input-group">
+    			          <span class="input-group-btn">
+    			              	<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+    			                  	<span class="glyphicon glyphicon-minus"></span>
+    			              	</button>
+    			          </span>
+    			          <input type="text" name="quant[1]" class="form-control input-number" value="@{{item.item}}" min="1" max="3" >
+    			          <span class="input-group-btn">
+    			              	<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+    			                  	<span class="glyphicon glyphicon-plus"></span>
+    			              	</button>
+    			          </span>
+    				    </div>
 
-                </div>
-
-                <div class="col-xs-12 col-md-8">
-                    Vegi Roll <a class="btn btn-danger" ng-click="deleteIngredient(ingredient.id)"><i class="fa fa-trash-o"></i></a>
-                </div>
-                <div class="col-xs-6 col-md-4">
-                	<div class="input-group">
-			          <span class="input-group-btn">
-			              	<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-			                  	<span class="glyphicon glyphicon-minus"></span>
-			              	</button>
-			          </span>
-			          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-			          <span class="input-group-btn">
-			              	<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-			                  	<span class="glyphicon glyphicon-plus"></span>
-			              	</button>
-			          </span>
-				    </div>
-	
+                    </div>
                 </div>
 
             </div>

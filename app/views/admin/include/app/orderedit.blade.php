@@ -15,7 +15,7 @@
 	        	$scope.order = order;
 	        });
 	        $http.get('/api/order/items/'+searchId+'').success(function(items){
-	        	$scope.items = items;
+	        	$scope.orderitems = items;
 	        	$scope.isAdd = 0;
 	        });
 	        
