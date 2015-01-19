@@ -61,7 +61,7 @@
     			                  	<span class="glyphicon glyphicon-minus"></span>
     			              	</button>
     			          </span>
-    			          <input type="text" name="quant[1]" class="form-control input-number" value="@{{item.item}}" min="1" max="3" >
+    			          <input type="text" name="quant[1]" class="form-control input-number" value="@{{orderitem.qty}}" min="1" max="3" >
     			          <span class="input-group-btn">
     			              	<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
     			                  	<span class="glyphicon glyphicon-plus"></span>
