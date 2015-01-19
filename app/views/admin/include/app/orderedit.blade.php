@@ -14,6 +14,10 @@
 	        $http.get('/api/order/details/'+searchId+'').success(function(order){
 	        	$scope.order = order;
 	        });
+	        $http.get('/api/order/items/'+searchId+'').success(function(items){
+	        	$scope.items = items;
+	        	$scope.isAdd = 0;
+	        });
 	        
 	        $scope.getFoodItem = function(id) {
 
