@@ -77,7 +77,7 @@ class OrderController extends BaseController {
 	
 	public function getitems($id)
 	{
-		return FooditemModel::where('orid', '=', $id)->get();
+		return OrderitemModel::where('orid', '=', $id)->get();
 	}
 
 }
