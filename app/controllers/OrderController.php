@@ -80,4 +80,13 @@ class OrderController extends BaseController {
 		return OrderitemModel::where('orid', '=', $id)->get();
 	}
 
+	public function deleteitem($id)
+	{
+	
+		$stock = OrderitemModel::find($id);
+		$stock->delete();
+		
+		
+		return Response::json(['destroy'=>true]);
+	}
 }

@@ -213,4 +213,6 @@ Route::group(array('before' => 'auth'), function(){
 	Route::put('api/order/item/{id}', 'OrderController@putitem');
 	// API to get Order Items
 	Route::get('api/order/items/{id}', 'OrderController@getitems');
+	// API to delete Order Item
+	Route::delete('api/order/item/{id}', 'OrderController@deleteitem');
 });
