@@ -72,6 +72,17 @@
                     </div>
                 </div>
 
+                <div >
+                    <div class="col-xs-12 col-md-8">
+                         Total:
+                    </div>
+                    <div class="col-xs-6 col-md-4">
+                        
+                        @{{ getTotal() }}
+
+                    </div>
+                </div>
+
             </div>
         </div>
                 

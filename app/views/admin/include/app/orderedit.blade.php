@@ -89,6 +89,16 @@
 			    });
 	        };
 
+	        $scope.getTotal = function(){
+			    var total = 0;
+
+			    for(var i = $scope.orderitems.length - 1; i >= 0; i--){
+			    	
+			    	total += $scope.orderitems[i].qty * $scope.orderitems[i].price;
+				}
+			    return total;
+			}
+
 	      };
 	
 	      myApp.config.push([function() {
