@@ -50,7 +50,7 @@
 
 	         $scope.deleteItem = function(id) {
 
-	        	$http.delete('/api/order/Item/'+id+'/').success(function(){
+	        	$http.delete('/api/order/item/'+id+'/').success(function(){
 		        	$http.get('/api/order/items/'+searchId+'').success(function(items){
 			        	$scope.orderitems = items;
 			        	$scope.isAdd = 0;
