@@ -71,7 +71,7 @@ class OrderController extends BaseController {
 
 	public function putitem($id)
 	{
-		FooditemModel::find($id)->update(Input::all());
+		OrderitemModel::find($id)->update(Input::all());
 		return Response::json(['success'=>true]);
 	}
 	
@@ -83,10 +83,28 @@ class OrderController extends BaseController {
 	public function deleteitem($id)
 	{
 	
-		$stock = OrderitemModel::find($id);
-		$stock->delete();
+		$item = OrderitemModel::find($id);
+		$item->delete();
 		
 		
 		return Response::json(['destroy'=>true]);
+	}
+
+	public function pitem($id)
+	{
+		$item = OrderitemModel::find($id);
+		$item->qty = $item->qty+1;
+		$item->save();
+
+		return Response::json(['success'=>true]);	
+	}
+
+	public function nitem($id)
+	{
+		$item = OrderitemModel::find($id);
+		$item->qty = $item->qty-1;
+		$item->save();
+
+		return Response::json(['success'=>true]);
 	}
 }

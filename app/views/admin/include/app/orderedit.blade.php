@@ -58,6 +58,25 @@
 		        });
 	        };
 
+	        $scope.pItem = function(id) {
+	        	$http.put('/api/order/item/p/'+id+'/').success(function(){
+			        $http.get('/api/order/items/'+searchId+'').success(function(items){
+			        	$scope.orderitems = items;
+			        	$scope.isAdd = 0;
+			        });
+			    });
+	        };
+
+	        $scope.nItem = function(id) {
+
+	        	$http.put('/api/order/item/n/'+id+'/').success(function(){
+			        $http.get('/api/order/items/'+searchId+'').success(function(items){
+			        	$scope.orderitems = items;
+			        	$scope.isAdd = 0;
+			        });
+			    });
+	        };
+
 	      };
 	
 	      myApp.config.push([function() {
