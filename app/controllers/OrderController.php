@@ -102,9 +102,10 @@ class OrderController extends BaseController {
 	public function nitem($id)
 	{
 		$item = OrderitemModel::find($id);
-		$item->qty = $item->qty-1;
-		$item->save();
-
+		if($item->qty>1){
+			$item->qty = $item->qty-1;
+			$item->save();
+		}
 		return Response::json(['success'=>true]);
 	}
 }
