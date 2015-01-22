@@ -37,7 +37,7 @@ class OrderitemModel extends Eloquent {
 		}
 	}
 
-	public function getPricetribute()
+	public function getPriceAttribute()
 	{
 		if($this->fiid==0){
 		return '-';
