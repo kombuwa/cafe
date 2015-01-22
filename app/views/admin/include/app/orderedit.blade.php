@@ -59,6 +59,7 @@
 	        };
 
 	        $scope.pItem = function(id) {
+	        	$scope.orderitems[id].qty = $scope.orderitems[id].qty + 1;
 	        	$http.put('/api/order/item/p/'+id+'/').success(function(){
 			        $http.get('/api/order/items/'+searchId+'').success(function(items){
 			        	$scope.orderitems = items;
