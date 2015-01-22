@@ -57,13 +57,13 @@
                     <div class="col-xs-6 col-md-4">
                     	<div class="input-group">
     			          <span class="input-group-btn">
-    			              	<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+    			              	<button type="button" class="btn btn-default btn-number" ng-click="pItem(orderitem.id)" data-type="minus" data-field="quant[1]">
     			                  	<span class="glyphicon glyphicon-minus"></span>
     			              	</button>
     			          </span>
     			          <input type="text" name="quant[1]" class="form-control input-number" value="@{{orderitem.qty}}" min="1" max="3" >
     			          <span class="input-group-btn">
-    			              	<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+    			              	<button type="button" class="btn btn-default btn-number" ng-click="nItem(orderitem.id)" data-type="plus" data-field="quant[1]">
     			                  	<span class="glyphicon glyphicon-plus"></span>
     			              	</button>
     			          </span>
