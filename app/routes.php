@@ -207,6 +207,8 @@ Route::group(array('before' => 'auth'), function(){
 
 	// API to get Order
 	Route::get('api/order/details/{id}', 'OrderController@getorder');
+	// API to get Orders
+	Route::get('api/orders/', 'OrderController@getorders');
 	// API to add Order Item
 	Route::post('api/order/Item/', 'OrderController@postitem');
 	// API to increase Order item quantity

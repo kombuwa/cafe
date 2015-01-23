@@ -64,6 +64,11 @@ class OrderController extends BaseController {
 		return OrderModel::find($id);
 	}
 
+	public function getorders()
+	{
+		return OrderModel::all();
+	}
+
 	public function postitem()
 	{
 		return OrderitemModel::create(Input::all());

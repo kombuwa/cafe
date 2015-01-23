@@ -7,8 +7,8 @@
 	        	{ id:2, name :"Juice" },
 	        ];*/
 	        
-	        $http.get('/api/food/categorys').success(function(categorys){
-	        	$scope.categorys = categorys;
+	        $http.get('api/orders/').success(function(orders){
+	        	$scope.orders = orders;
 	        });
 	        
 	        $scope.addCategory = function() {

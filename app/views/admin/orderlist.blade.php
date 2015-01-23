@@ -60,16 +60,18 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Name</th>
+                                            <th>Tabel</th>
+                                            <th>Description</th>
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr ng-repeat="category in categorys | filter:search">
-                                            <td>@{{category.id}}</td>
-                                            <td>@{{category.name}}</td>
+                                        <tr ng-repeat="order in orders | filter:search">
+                                            <td>@{{order.created_at}}</td>
+                                            <td>@{{order.location}}</td>
+                                            <td>@{{order.description}}</td>
                                             <td><div align="right" >
-                                            <span class="badge" ng-show="category.items" title="Items">@{{category.items}}</span>
+                                            <span class="badge" ng-show="category.items" title="Items">@{{order.agent}}</span>
                                             <a class="btn btn-danger" ng-click="deleteCategory(category.id)"><i class="fa fa-trash-o"></i></a>
                                             </div></td>
                                         </tr>
