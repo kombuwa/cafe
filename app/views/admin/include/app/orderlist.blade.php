@@ -7,7 +7,7 @@
 	        	{ id:2, name :"Juice" },
 	        ];*/
 	        
-	        $http.get('api/orders/').success(function(orders){
+	        $http.get('/api/orders/').success(function(orders){
 	        	$scope.orders = orders;
 	        });
 	        
