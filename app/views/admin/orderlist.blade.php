@@ -72,7 +72,8 @@
                                             <td>@{{order.description}}</td>
                                             <td><div align="right" >
                                             <span class="badge" ng-show="category.items" title="Items">@{{order.agent}}</span>
-                                            <a class="btn btn-danger" ng-click="deleteCategory(category.id)"><i class="fa fa-trash-o"></i></a>
+                                            <a class="btn btn-danger" ng-href=="/order/edit/@{{order.id}}" ><i class="fa fa-pencil-square-o"></i></a>
+                                            <a class="btn btn-danger" ng-click="deleteCategory(order.id)"><i class="fa fa-trash-o"></i></a>
                                             </div></td>
                                         </tr>
                                     </tbody>
