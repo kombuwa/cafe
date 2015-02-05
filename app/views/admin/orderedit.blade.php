@@ -36,7 +36,7 @@
         @{{order.description}} <br>
         
 		<div class="row">
-		<div class="col-xs-6">
+		<div class="col-md-6">
 			<div class="row show-grid">
 				<div class="col-xs-12 col-md-8">
 
@@ -76,7 +76,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xs-6">
+		<div class="col-md-6">
 			<tabset>
 				<tab ng-repeat="category in categorys"
 					 heading="@{{category.name}}" select="getFoodItem(category.id)">
