@@ -91,7 +91,7 @@
 		  	</accordion>
 
 			</br>
-			<tabset>
+			<!--<tabset>
 				<tab ng-repeat="category in categorys"
 					 heading="@{{category.name}}" select="getFoodItem(category.id)">
 					<div >
@@ -105,7 +105,7 @@
 					  
 					   
 				</tab>
-			</tabset>
+			</tabset>-->
 		</div>
 		</div>
 
