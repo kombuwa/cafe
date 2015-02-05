@@ -82,7 +82,7 @@
 					 heading="@{{category.name}}" select="getFoodItem(category.id)">
 					<div >
 					<div class="row">
-					  <div ng-repeat="item in items" class="col-xs-6 col-md-4 label label-primary" ng-click="addItem(item.id, order.id);" style="margin: 5px;
+					  <div ng-repeat="item in items" class="col-xs-6 col-md-2 label label-primary" ng-click="addItem(item.id, order.id);" style="white-space: normal; min-height: 60px; margin: 5px;
 		padding: 10px; cursor:pointer;" >
 						
 						  @{{item.name}}
