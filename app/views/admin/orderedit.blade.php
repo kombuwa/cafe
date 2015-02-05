@@ -80,8 +80,8 @@
 
 			<accordion close-others="oneAtATime">
     
-		    <accordion-group heading="{{category.name}}" ng-repeat="category in categorys">
-		      {{group.content}}
+		    <accordion-group heading="@{{category.name}}" ng-repeat="category in categorys">
+		      fdsgsdfgsdfg
 		    </accordion-group>
 
 		  	</accordion>
