@@ -81,6 +81,14 @@
 				<tab ng-repeat="category in categorys"
 					 heading="@{{category.name}}" select="getFoodItem(category.id)">
 					<div >
+					<div class="row">
+					  <div ng-repeat="item in items" class="col-xs-6 col-md-3">
+						<a href="#" class="thumbnail">
+						  <img src="..." alt="...">
+						</a>
+					  </div>
+					  
+					</div>
 						<div style="padding-top:10px;">
 							<div ng-repeat="item in items" class="label label-primary" style="margin: 5px;
 		padding: 10px; cursor:pointer;" ng-click="addItem(item.id, order.id);" >
