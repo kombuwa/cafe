@@ -89,14 +89,7 @@
 						
 					  </div>
 					  
-					</div>
-						<div style="padding-top:10px;">
-							<div ng-repeat="item in items" class="label label-primary" style="margin: 5px;
-		padding: 10px; cursor:pointer;" ng-click="addItem(item.id, order.id);" >
-								@{{item.name}}
-							</div>
-						</div>
-					</div>     
+					   
 				</tab>
 			</tabset>
 		</div>
