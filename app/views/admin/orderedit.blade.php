@@ -42,7 +42,7 @@
 
 					<div ng-repeat="orderitem in orderitems">
 						<div class="col-xs-12 col-md-8">
-							 <a class="btn btn-danger" ng-click="deleteItem(orderitem.id)"><i class="fa fa-trash-o"></i></a>@{{orderitem.item}} 
+							 <a class="btn btn-danger" ng-click="deleteItem(orderitem.id)"><i class="fa fa-trash-o"></i></a> &nbsp; @{{orderitem.item}} 
 						</div>
 						<div class="col-xs-6 col-md-4">
 							<div class="input-group">
@@ -82,7 +82,7 @@
 					 heading="@{{category.name}}" select="getFoodItem(category.id)">
 					<div >
 					<div class="row">
-					  <div ng-repeat="item in items" class="col-xs-6 col-md-3 label label-primary" ng-click="addItem(item.id, order.id);" style="margin: 5px;
+					  <div ng-repeat="item in items" class="col-xs-6 col-md-4 label label-primary" ng-click="addItem(item.id, order.id);" style="margin: 5px;
 		padding: 10px; cursor:pointer;" >
 						
 						  @{{item.name}}
