@@ -42,7 +42,7 @@
 
 					<div ng-repeat="orderitem in orderitems">
 						<div class="col-xs-12 col-md-8">
-							 @{{orderitem.item}} <a class="btn btn-danger" ng-click="deleteItem(orderitem.id)"><i class="fa fa-trash-o"></i></a>
+							 <a class="btn btn-danger" ng-click="deleteItem(orderitem.id)"><i class="fa fa-trash-o"></i></a>@{{orderitem.item}} 
 						</div>
 						<div class="col-xs-6 col-md-4">
 							<div class="input-group">
