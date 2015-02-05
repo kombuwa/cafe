@@ -77,23 +77,15 @@
 			</div>
 		</div>
 		<div class="col-md-6">
-			<ul class="nav nav-tabs responsive" id="myTab">
-			  <li class="active"><a href="#home">Home</a></li>
-			  <li><a href="#profile">Profile</a></li>
-			  <li><a href="#messages">Messages</a></li>
-			</ul>
 
-			<div class="tab-content responsive">
-			  <div class="tab-pane active" id="home">...content...</div>
-			  <div class="tab-pane" id="profile">...content...</div>
-			  <div class="tab-pane" id="messages">...content...</div>
-			</div>
+			<accordion close-others="oneAtATime">
+    
+		    <accordion-group heading="{{category.name}}" ng-repeat="category in categorys">
+		      {{group.content}}
+		    </accordion-group>
 
-			<script type="text/javascript">
-			  (function($) {
-			      fakewaffle.responsiveTabs(['xs', 'sm']);
-			  })(jQuery);
-			</script>
+		  	</accordion>
+
 			</br>
 			<tabset>
 				<tab ng-repeat="category in categorys"
