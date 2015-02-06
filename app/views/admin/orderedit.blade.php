@@ -81,7 +81,7 @@
 			<accordion close-others="oneAtATime">
     
 		    <accordion-group heading="@{{category.name}}" ng-repeat="category in categorys" ng-click="getFoodItem(category.id)">
-		    	<div ng-repeat="item in items"  ng-click="addItem(item.id, order.id);" >
+		    	<div ng-repeat="item in items" class="lable lablel-primary" ng-click="addItem(item.id, order.id);" >
 						
 						  @{{item.name}}
 						
