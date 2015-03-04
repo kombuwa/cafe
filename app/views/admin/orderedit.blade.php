@@ -78,7 +78,7 @@
 		</div>
 		<div class="col-md-6">
 
-			<accordion close-others="oneAtATime">
+			<accordion close-others="true">
     
 		    <accordion-group heading="@{{category.name}}" ng-repeat="category in categorys" ng-click="getFoodItem(category.id)">
 				<div class="row">
