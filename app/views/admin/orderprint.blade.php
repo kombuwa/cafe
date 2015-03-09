@@ -34,19 +34,17 @@
         
         <div style="width:215px;">
         <h3>Cafe Ceylon</h3>
-        -------------------
+        -------------------<br>
         Matara Road Kabalana, Ahangama, Sri Lanka.</br>
         09 12282729 or 0774028662</br>
-        E mail : sales@cafeceylon.lk 
-        -------------------
-        Agent: @{{order.agent}} | Tabel:@{{order.location}}
+        E mail : sales@cafeceylon.lk <br>
+        -------------------<br>
+        Agent: @{{order.agent}} | Tabel:@{{order.location}}<br>
         
-        -------------------
+        -------------------<br>
         <div ng-repeat="orderitem in orderitems">
 						<div style="font-size:11px;">
-							  &nbsp; @{{orderitem.item}} &nbsp;  [ @{{orderitem.qty}} ]
-						</div>
-						<div >
+							  &nbsp; @{{orderitem.item}} &nbsp;  [ @{{orderitem.qty}} ]		
 							  @{{orderitem.price * orderitem.qty}} 
 						</div>
 					</div>
