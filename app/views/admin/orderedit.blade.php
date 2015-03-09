@@ -111,9 +111,7 @@
 				</div>
 			</div>
 			<div>
-				<button type="button" class="btn btn-default" >
-					Print
- 				</button>
+				<a ng-href="/order/print/@{{order.id}}" class="btn btn-info">Print</a>
 			</div>
 		</div>
 		<div class="col-md-4">
