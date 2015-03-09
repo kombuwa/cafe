@@ -139,11 +139,7 @@ body {
 	
 }
 
-@media (min-width: 1068px) {
-  .navbar-toggle {
-    display: block;
-  }
-}
+
 
 .btn-outline {
     color: inherit;
