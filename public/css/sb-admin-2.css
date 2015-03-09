@@ -141,7 +141,7 @@ body {
 
 @media (min-width: 1068px) {
   .navbar-toggle {
-    display: none;
+    display: block;
   }
 }
 
