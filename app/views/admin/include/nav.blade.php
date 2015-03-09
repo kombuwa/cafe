@@ -13,6 +13,31 @@
             
 
             <ul class="nav navbar-top-links navbar-right">
+                @if($user_access == 'admin' || $user_access == 'manager')
+                <li>
+                    <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> </a>
+                </li>
+                @endif
+
+                @if($user_access == 'admin' || $user_access == 'manager')
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-cutlery fa-fw"></i><i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="{{ route('admin.foodcategory') }}">Food Category</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('admin.foodingredient') }}">Ingredients</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('admin.fooditem') }}">Food Item</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+                @endif
 
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
