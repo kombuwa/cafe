@@ -136,6 +136,13 @@ body {
     .navbar-top-links .dropdown-alerts {
         margin-left: auto;
     }
+	
+}
+
+@media (min-width: 1068px) {
+  .navbar-toggle {
+    display: none;
+  }
 }
 
 .btn-outline {
