@@ -14,6 +14,21 @@
 
             <ul class="nav navbar-top-links navbar-right">
 
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-shopping-cart fa-fw"></i><i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="{{ route('admin.ordernew') }}">New Order </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('admin.orderlist') }}">Order List</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+
                 @if($user_access == 'admin' || $user_access == 'manager')
                 <li>
                     <a href="{{ route('admin.foodstock') }}"><i class="fa fa-book fa-fw"></i></a>
