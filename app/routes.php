@@ -96,6 +96,11 @@ Route::group(array('before' => 'auth'), function(){
 	));
 });
 
+//  Route to the print Order page
+Route::group(array('before' => 'auth'), function(){
+	Route::get('order/print/{id}', 'OrderController@printOrder');
+});
+
 
 /////////////////////////
 /*-- PRE AUTH ROUTS --*/

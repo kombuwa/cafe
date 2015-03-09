@@ -59,6 +59,11 @@ class OrderController extends BaseController {
         return View::make('admin.orderedit')->with('searchId', $id)->with('title','Edit Order');
     }
 
+    public function printOrder($id)
+    {
+        return View::make('admin.orderprint')->with('searchId', $id)->with('title','Print Order');
+    }
+
     public function getorder($id)
 	{
 		return OrderModel::find($id);
