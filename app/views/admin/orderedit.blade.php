@@ -63,30 +63,30 @@
 					</div>
 
 					<div >
-						<div class="col-xs-12 col-md-8">
+						<div class="col-xs-12 col-md-8 text-right">
 							 Total:
 						</div>
-						<div class="col-xs-6 col-md-4">
+						<div class="col-xs-6 col-md-4 text-right">
 
 							@{{ getTotal() }}
 
 						</div>
 					</div>
                     <div >
-						<div class="col-xs-12 col-md-8">
+						<div class="col-xs-12 col-md-8 text-right">
 							 Tax:
 						</div>
-						<div class="col-xs-6 col-md-4">
+						<div class="col-xs-6 col-md-4 text-right">
 
 							@{{ (getTotal()/100)*20 }}
 
 						</div>
 					</div>
                     <div >
-						<div class="col-xs-12 col-md-8">
+						<div class="col-xs-12 col-md-8 text-right">
 							 Discount:
 						</div>
-						<div class="col-xs-6 col-md-4">
+						<div class="col-xs-6 col-md-4 text-right">
 
 							<select ng-model="discount">
 							  <option value="5">5 %</option>
@@ -98,12 +98,12 @@
 						</div>
 					</div>
                     <div >
-						<div class="col-xs-12 col-md-8">
-							 To Pay:
+						<div class="col-xs-12 col-md-8 text-right">
+							 <strong>To Pay:</strong>
 						</div>
-						<div class="col-xs-6 col-md-4">
+						<div class="col-xs-6 col-md-4 text-right">
 
-							00.00
+							<strong>@{{ getTotal() + ((getTotal()/100)*20)}}</strong>
 
 						</div>
 					</div>
