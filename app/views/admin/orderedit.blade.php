@@ -84,7 +84,7 @@
 				<div class="row">
 					<div ng-repeat="item in items" class="col-xs-6 col-md-3 label label-primary" ng-click="addItem(item.id, order.id);" style="white-space: normal; min-height: 60px; margin: 5px; padding: 10px; cursor:pointer;"  >
 						
-						  @{{item.name | characters:20}}
+						  @{{item.name | characters:21}}
 						
 					</div>
 				</div>
