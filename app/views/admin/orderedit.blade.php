@@ -88,7 +88,12 @@
 						</div>
 						<div class="col-xs-6 col-md-4">
 
-							00.00
+							<select ng-model="discount">
+							  <option value="5">5 %</option>
+							  <option value="10">10 %</option>
+							  <option value="15">15 %</option>
+							  <option value="20">20 %</option>
+							</select> 
 
 						</div>
 					</div>
