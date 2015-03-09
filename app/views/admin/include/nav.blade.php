@@ -16,14 +16,16 @@
 
                 @if($user_access == 'admin' || $user_access == 'manager')
                 <li>
-                    <a href="{{ route('admin.foodstock') }}"><i class="fa fa-book fa-fw"></i> Stock</a>
+                    <a href="{{ route('admin.foodstock') }}"><i class="fa fa-book fa-fw"></i></a>
                 </li>
                 @endif
 
                 @if($user_access == 'admin')
-                <li>
-                    <a href="#"><i class="fa fa-briefcase fa-fw"></i> Mannagment<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-briefcase fa-fw"></i><i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
                         <li>
                             <a href="flot.html">User</a>
                         </li>
