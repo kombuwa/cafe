@@ -114,41 +114,6 @@
 				<a ng-href="/order/print/@{{order.id}}" class="btn btn-info">Print</a>
 			</div>
 		</div>
-		<div class="col-md-4">
-			Agent: @{{order.agent}} <br>
-	        Tabel: @{{order.location}} <br>
-	        @{{order.description}} <br>
-			<accordion close-others="true">
-    
-		    <accordion-group heading="@{{category.name}}" ng-repeat="category in categorys" ng-click="getFoodItem(category.id)">
-				<div class="row">
-					<div ng-repeat="item in items" class="col-xs-6 col-uma label label-primary" ng-click="addItem(item.id, order.id);" style="white-space: normal; min-height: 80px; margin: 5px; padding: 10px; cursor:pointer;"  >
-						
-						  @{{item.name | characters:40}}
-						
-					</div>
-				</div>
-		    </accordion-group>
-
-		  	</accordion>
-
-			</br>
-			<!--<tabset>
-				<tab ng-repeat="category in categorys"
-					 heading="@{{category.name}}" select="getFoodItem(category.id)">
-					<div >
-					<div class="row">
-					  <div ng-repeat="item in items" class="col-xs-6 col-md-3 label label-primary" ng-click="addItem(item.id, order.id);" style="white-space: normal; min-height: 60px; margin: 5px;
-		padding: 10px; cursor:pointer;" >
-						
-						  @{{item.name}}
-						
-					  </div>
-					  
-					   
-				</tab>
-			</tabset>-->
-		</div>
 		</div>
 
         
