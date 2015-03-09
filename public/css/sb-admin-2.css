@@ -351,3 +351,7 @@ table.dataTable thead .sorting:after {
     padding: 10px 15px;
     margin: -10px -15px;
 }
+
+.col-uma {
+    width: 30%;
+}
