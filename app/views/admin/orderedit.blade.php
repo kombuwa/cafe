@@ -31,9 +31,7 @@
         <script type="text/javascript">
             var searchId = {{ $searchId }};
         </script>
-        Agent: @{{order.agent}} <br>
-        Tabel: @{{order.location}} <br>
-        @{{order.description}} <br>
+        
         
 		<div class="row">
 		<div class="col-md-8">
@@ -114,7 +112,9 @@
 			</div>
 		</div>
 		<div class="col-md-4">
-
+			Agent: @{{order.agent}} <br>
+	        Tabel: @{{order.location}} <br>
+	        @{{order.description}} <br>
 			<accordion close-others="true">
     
 		    <accordion-group heading="@{{category.name}}" ng-repeat="category in categorys" ng-click="getFoodItem(category.id)">
