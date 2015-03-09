@@ -42,7 +42,7 @@
 
 					<div ng-repeat="orderitem in orderitems">
 						<div class="col-xs-12 col-md-8" style="font-size:11px;">
-							 <a class="btn btn-danger" ng-click="deleteItem(orderitem.id)"><i class="fa fa-trash-o"></i></a> &nbsp; @{{orderitem.item}} &nbsp; <span class="label label-primary">@{{orderitem.price}}</span>
+							 <a class="btn btn-danger" ng-click="deleteItem(orderitem.id)"><i class="fa fa-trash-o"></i></a> &nbsp; @{{orderitem.item}} &nbsp; <span class="label label-primary">Rs @{{orderitem.price}}</span>
 						</div>
 						<div class="col-xs-6 col-md-4">
 							<div class="input-group">
