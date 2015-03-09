@@ -13,10 +13,25 @@
             
 
             <ul class="nav navbar-top-links navbar-right">
-                
+
                 @if($user_access == 'admin' || $user_access == 'manager')
                 <li>
                     <a href="{{ route('admin.foodstock') }}"><i class="fa fa-book fa-fw"></i> Stock</a>
+                </li>
+                @endif
+
+                @if($user_access == 'admin')
+                <li>
+                    <a href="#"><i class="fa fa-briefcase fa-fw"></i> Mannagment<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="flot.html">User</a>
+                        </li>
+                        <li>
+                            <a href="morris.html">Report</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
                 </li>
                 @endif
 
