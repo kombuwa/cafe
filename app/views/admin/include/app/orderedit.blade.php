@@ -2,6 +2,7 @@
 	      myApp.controllers.orderController = function($scope, $http) {
 	        //Do Awesome Controller Stuff As Usual
 	        $scope.message = 'Order Edit!';
+	        $scope.discount = 0;
 	        /*$scope.categorys = [
 	        	{ id:1, name :"Soup" },
 	        	{ id:2, name :"Juice" },
