@@ -36,7 +36,7 @@
         @{{order.description}} <br>
         
 		<div class="row">
-		<div class="col-md-6">
+		<div class="col-md-8">
 			<div class="row show-grid">
 				<div class="col-xs-12 ">
 
@@ -76,7 +76,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-4">
 
 			<accordion close-others="true">
     
