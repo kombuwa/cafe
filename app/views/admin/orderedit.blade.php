@@ -98,7 +98,7 @@
 						</div>
 						<div class="col-xs-6 col-md-4 text-right">
 
-							<strong>@{{ getTotal() +(getTotal()/100)*20)}}</strong>
+							<strong>@{{ getTotal() + ((getTotal()/100)*20)}}</strong>
 
 						</div>
 					</div>
