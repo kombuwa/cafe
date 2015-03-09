@@ -41,7 +41,7 @@
 				<div class="col-xs-12 ">
 
 					<div ng-repeat="orderitem in orderitems">
-						<div class="col-xs-12 col-md-8">
+						<div class="col-xs-12 col-md-8" style="font-size:11px;">
 							 <a class="btn btn-danger" ng-click="deleteItem(orderitem.id)"><i class="fa fa-trash-o"></i></a> &nbsp; @{{orderitem.item}} 
 						</div>
 						<div class="col-xs-6 col-md-4">
