@@ -110,6 +110,11 @@
 
 				</div>
 			</div>
+			<div>
+				<button type="button" class="btn btn-default" >
+					Print
+ 				</button>
+			</div>
 		</div>
 		<div class="col-md-4">
 			Agent: @{{order.agent}} <br>
