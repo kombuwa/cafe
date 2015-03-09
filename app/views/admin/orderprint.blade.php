@@ -32,7 +32,7 @@
             var searchId = {{ $searchId }};
         </script>
         
-        <div style="width:215px; text-align:center">
+        <div style="width:215px; text-align:center; font-size:9px;">
         <h3>Cafe Ceylon</h3>
         -------------------<br>
         Matara Road Kabalana, Ahangama, Sri Lanka.</br>
