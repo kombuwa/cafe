@@ -32,23 +32,30 @@
             var searchId = {{ $searchId }};
         </script>
         
-        <div style="width:215px; text-align:center; font-size:9px;">
-        Cafe Ceylon
-        -------------------
-        Matara Road Kabalana, Ahangama, Sri Lanka.
-        09 12282729 or 0774028662
-        E mail : sales@cafeceylon.lk 
-        -------------------
-        Agent: @{{order.agent}} | Tabel:@{{order.location}}
-        
-        -------------------
-        <div ng-repeat="orderitem in orderitems">
-						<div style="font-size:11px;">
-							  &nbsp; @{{orderitem.item}} &nbsp;  [ @{{orderitem.qty}} ]		
-							  @{{orderitem.price * orderitem.qty}} 
-						</div>
-					</div>
+        <div style="width:260px; text-align:center; font-size:9px; font-family:Verdana, Geneva, sans-serif">
+        <h3>Cafe Ceylon</h3>
+        ============================================<br>
+        Matara Road Kabalana, <br>
+        Ahangama, Sri Lanka.<br>
+        09 12282729<br>
+        E mail : sales@cafeceylon.lk <br>
+        ============================================<br>
+        Waiter: @{{order.agent}} | Table:@{{order.location}} | Pax:@{{order.location}}<br>
+        ============================================<br>
         </div>
+        <div ng-repeat="orderitem in orderitems" style="width:260px; font-size:9px; font-family:Arial, Helvetica, sans-serif">
+              <div style="font-size:11px; width:160px; float:left;">
+                    &nbsp; @{{orderitem.item}} &nbsp;  		
+                    @{{orderitem.price * orderitem.qty}} 
+              </div>
+              <div style="font-size:11px; width:50px; float:left;">
+                     @{{orderitem.qty}} 		
+			  </div>
+              <div style="font-size:11px; width:50px; float:left;">
+                     @{{orderitem.price * orderitem.qty}} 
+              </div>
+		</div>
+        
         <div style="width:215px;">
        			 <div >
 						<div class="col-xs-12 col-md-8 text-right">
