@@ -34,14 +34,14 @@
         
         <div style="width:360px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif">
         <h3>Cafe Ceylon</h3>
-        ============================================<br>
+        =======================================<br>
         Matara Road Kabalana, <br>
         Ahangama, Sri Lanka.<br>
         09 12282729<br>
         E mail : sales@cafeceylon.lk <br>
-        =====================================<br>
+        ==================================<br>
         Waiter: @{{order.agent}} | Table:@{{order.location}} | Pax:@{{order.location}}<br>
-        =======================================<br>
+        ======================================<br>
         </div>
         <div style="width:360px; font-size:11px; font-family:Arial, Helvetica, sans-serif">
               <div style="font-size:11px; width:250px; float:left;">
