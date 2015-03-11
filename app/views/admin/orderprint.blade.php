@@ -43,32 +43,32 @@
         Waiter: @{{order.agent}} | Table:@{{order.location}} | Pax:@{{order.location}}<br>
         ==================================<br>
         </div>
-        <div style="width:360px; font-size:11px; font-family:Arial, Helvetica, sans-serif">
-              <div style="font-size:11px; width:250px; float:left;">
+        <div style="width:300px; font-size:11px; font-family:Arial, Helvetica, sans-serif">
+              <div style="font-size:11px; width:200px; float:left;">
                     Item
               </div>
-              <div style="font-size:11px; width:55px; float:left;">
+              <div style="font-size:11px; width:50px; float:left;">
                      Qty		
 			  </div>
-              <div style="font-size:11px; width:55px; float:left;">
+              <div style="font-size:11px; width:50px; float:left;">
                      Amount 
               </div>
 		</div>
-        <div ng-repeat="orderitem in orderitems" style="width:360px; font-size:11px; font-family:Arial, Helvetica, sans-serif">
-              <div style="font-size:11px; width:250px; float:left;">
+        <div ng-repeat="orderitem in orderitems" style="width:300px; font-size:11px; font-family:Arial, Helvetica, sans-serif">
+              <div style="font-size:11px; width:200px; float:left;">
                     @{{orderitem.item}} 		
               </div>
-              <div style="font-size:11px; width:55px; float:left;">
+              <div style="font-size:11px; width:50px; float:left;">
                      @{{orderitem.qty}} 		
 			  </div>
-              <div style="font-size:11px; width:55px; float:left;">
+              <div style="font-size:11px; width:50px; float:left;">
                      @{{orderitem.price * orderitem.qty}} 
               </div>
 		</div>
         <div style="clear:both;"></div>
-        <div style="width:360px;">
+        <div style="width:300px;">
        			 <div >
-						<div style="font-size:12px; width:300px; float:left; ">
+						<div style="font-size:12px; width:190px; float:left; ">
 							 Total:
 						</div>
 						<div style="font-size:12px; width:60px; float:left;">
@@ -79,7 +79,7 @@
 					</div>
 
                     <div >
-						<div style="font-size:12px; width:300px; float:left; ">
+						<div style="font-size:12px; width:190px; float:left; ">
 							 Discount:
 						</div>
 						<div style="font-size:12px; width:60px; float:left;">
@@ -89,7 +89,7 @@
 						</div>
 					</div>
                     <div >
-						<div style="font-size:12px; width:300px; float:left; ">
+						<div style="font-size:12px; width:190px; float:left; ">
 							 <strong>To Pay:</strong>
 						</div>
 						<div style="font-size:12px; width:60px; float:left;">
