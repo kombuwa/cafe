@@ -43,10 +43,20 @@
         Waiter: @{{order.agent}} | Table:@{{order.location}} | Pax:@{{order.location}}<br>
         ============================================<br>
         </div>
+        <div style="width:260px; font-size:9px; font-family:Arial, Helvetica, sans-serif">
+              <div style="font-size:11px; width:160px; float:left;">
+                    Item
+              </div>
+              <div style="font-size:11px; width:50px; float:left;">
+                     Qty		
+			  </div>
+              <div style="font-size:11px; width:50px; float:left;">
+                     Amount 
+              </div>
+		</div>
         <div ng-repeat="orderitem in orderitems" style="width:260px; font-size:9px; font-family:Arial, Helvetica, sans-serif">
               <div style="font-size:11px; width:160px; float:left;">
-                    &nbsp; @{{orderitem.item}} &nbsp;  		
-                    @{{orderitem.price * orderitem.qty}} 
+                    @{{orderitem.item}} 		
               </div>
               <div style="font-size:11px; width:50px; float:left;">
                      @{{orderitem.qty}} 		
