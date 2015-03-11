@@ -32,43 +32,43 @@
             var searchId = {{ $searchId }};
         </script>
         
-        <div style="width:280px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif">
+        <div style="width:250px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif">
         <h3>Cafe Ceylon</h3>
-        ==============================<br>
+        ===========================<br>
         Matara Road Kabalana, <br>
         Ahangama, Sri Lanka.<br>
         09 12282729<br>
         E mail : sales@cafeceylon.lk <br>
-        ==============================<br>
+        ===========================<br>
         Waiter: @{{order.agent}} | Table:@{{order.location}} | Pax:@{{order.location}}<br>
-        ==============================<br>
+        ===========================<br>
         </div>
-        <div style="width:280px; font-size:11px; font-family:Arial, Helvetica, sans-serif">
-              <div style="font-size:11px; width:180px; float:left;">
+        <div style="width:250px; font-size:11px; font-family:Arial, Helvetica, sans-serif">
+              <div style="font-size:11px; width:160px; float:left;">
                     Item
               </div>
-              <div style="font-size:11px; width:50px; float:left;">
+              <div style="font-size:11px; width:45px; float:left;">
                      Qty		
 			  </div>
-              <div style="font-size:11px; width:50px; float:left;">
+              <div style="font-size:11px; width:45px; float:left;">
                      Amount 
               </div>
 		</div>
         <div ng-repeat="orderitem in orderitems" style="width:280px; font-size:11px; font-family:Arial, Helvetica, sans-serif">
-              <div style="font-size:11px; width:180px; float:left;">
+              <div style="font-size:11px; width:160px; float:left;">
                     @{{orderitem.item}} 		
               </div>
-              <div style="font-size:11px; width:50px; float:left;">
+              <div style="font-size:11px; width:45px; float:left;">
                      @{{orderitem.qty}} 		
 			  </div>
-              <div style="font-size:11px; width:50px; float:left;">
+              <div style="font-size:11px; width:45px; float:left;">
                      @{{orderitem.price * orderitem.qty}} 
               </div>
 		</div>
         <div style="clear:both;"></div>
-        <div style="width:280px;">
+        <div style="width:250px;">
        			 <div >
-						<div style="font-size:12px; width:220px; float:left; ">
+						<div style="font-size:12px; width:190px; float:left; ">
 							 Total:
 						</div>
 						<div style="font-size:12px; width:60px; float:left;">
@@ -79,7 +79,7 @@
 					</div>
 
                     <div >
-						<div style="font-size:12px; width:220px; float:left; ">
+						<div style="font-size:12px; width:190px; float:left; ">
 							 Discount:
 						</div>
 						<div style="font-size:12px; width:60px; float:left;">
@@ -89,7 +89,7 @@
 						</div>
 					</div>
                     <div >
-						<div style="font-size:12px; width:220px; float:left; ">
+						<div style="font-size:12px; width:190px; float:left; ">
 							 <strong>To Pay:</strong>
 						</div>
 						<div style="font-size:12px; width:60px; float:left;">
