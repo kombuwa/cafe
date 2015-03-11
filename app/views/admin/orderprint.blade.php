@@ -39,9 +39,9 @@
         Ahangama, Sri Lanka.<br>
         09 12282729<br>
         E mail : sales@cafeceylon.lk <br>
-        ============================================<br>
+        =====================================<br>
         Waiter: @{{order.agent}} | Table:@{{order.location}} | Pax:@{{order.location}}<br>
-        ============================================<br>
+        =======================================<br>
         </div>
         <div style="width:260px; font-size:9px; font-family:Arial, Helvetica, sans-serif">
               <div style="font-size:11px; width:160px; float:left;">
@@ -54,54 +54,45 @@
                      Amount 
               </div>
 		</div>
-        <div ng-repeat="orderitem in orderitems" style="width:260px; font-size:9px; font-family:Arial, Helvetica, sans-serif">
-              <div style="font-size:11px; width:160px; float:left;">
+        <div ng-repeat="orderitem in orderitems" style="width:260px; font-size:10px; font-family:Arial, Helvetica, sans-serif">
+              <div style="font-size:10px; width:160px; float:left;">
                     @{{orderitem.item}} 		
               </div>
-              <div style="font-size:11px; width:50px; float:left;">
+              <div style="font-size:10px; width:50px; float:left;">
                      @{{orderitem.qty}} 		
 			  </div>
-              <div style="font-size:11px; width:50px; float:left;">
+              <div style="font-size:10px; width:50px; ">
                      @{{orderitem.price * orderitem.qty}} 
               </div>
 		</div>
-        
-        <div style="width:215px;">
+        <div style="clear:both;"></div>
+        <div style="width:260px;">
        			 <div >
-						<div class="col-xs-12 col-md-8 text-right">
+						<div style="font-size:12px; width:200px; float:left;">
 							 Total:
 						</div>
-						<div class="col-xs-6 col-md-4 text-right">
+						<div style="font-size:12px; width:60px; float:left;">
+
+							@{{ getTotal() }}
+
+						</div>
+					</div>
+
+                    <div >
+						<div style="font-size:12px; width:200px; float:left;">
+							 Discount:
+						</div>
+						<div style="font-size:12px; width:60px; float:left;">
 
 							@{{ getTotal() }}
 
 						</div>
 					</div>
                     <div >
-						<div class="col-xs-12 col-md-8 text-right">
-							 Tax:
-						</div>
-						<div class="col-xs-6 col-md-4 text-right">
-
-							@{{ (getTotal()/100)*20 }}
-
-						</div>
-					</div>
-                    <div >
-						<div class="col-xs-12 col-md-8 text-right">
-							 Discount:
-						</div>
-						<div class="col-xs-6 col-md-4 text-right">
-
-							
-
-						</div>
-					</div>
-                    <div >
-						<div class="col-xs-12 col-md-8 text-right">
+						<div style="font-size:12px; width:200px; float:left;">
 							 <strong>To Pay:</strong>
 						</div>
-						<div class="col-xs-6 col-md-4 text-right">
+						<div style="font-size:12px; width:60px; float:left;">
 
 							<strong>@{{ getTotal() + ((getTotal()/100)*20) - ((getTotal()/100)*discount)}}</strong>
 
