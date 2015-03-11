@@ -32,7 +32,7 @@
             var searchId = {{ $searchId }};
         </script>
         
-        <div style="width:360px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif">
+        <div style="width:300px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif">
         <h3>Cafe Ceylon</h3>
         ==================================<br>
         Matara Road Kabalana, <br>
@@ -68,7 +68,7 @@
         <div style="clear:both;"></div>
         <div style="width:300px;">
        			 <div >
-						<div style="font-size:12px; width:190px; float:left; ">
+						<div style="font-size:12px; width:240px; float:left; ">
 							 Total:
 						</div>
 						<div style="font-size:12px; width:60px; float:left;">
@@ -79,7 +79,7 @@
 					</div>
 
                     <div >
-						<div style="font-size:12px; width:190px; float:left; ">
+						<div style="font-size:12px; width:240px; float:left; ">
 							 Discount:
 						</div>
 						<div style="font-size:12px; width:60px; float:left;">
@@ -89,7 +89,7 @@
 						</div>
 					</div>
                     <div >
-						<div style="font-size:12px; width:190px; float:left; ">
+						<div style="font-size:12px; width:240px; float:left; ">
 							 <strong>To Pay:</strong>
 						</div>
 						<div style="font-size:12px; width:60px; float:left;">
