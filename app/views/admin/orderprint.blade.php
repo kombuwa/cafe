@@ -44,13 +44,13 @@
         =======================================<br>
         </div>
         <div style="width:360px; font-size:11px; font-family:Arial, Helvetica, sans-serif">
-              <div style="font-size:11px; width:160px; float:left;">
+              <div style="font-size:11px; width:250px; float:left;">
                     Item
               </div>
-              <div style="font-size:11px; width:50px; float:left;">
+              <div style="font-size:11px; width:55px; float:left;">
                      Qty		
 			  </div>
-              <div style="font-size:11px; width:50px; float:left;">
+              <div style="font-size:11px; width:55px; float:left;">
                      Amount 
               </div>
 		</div>
@@ -66,9 +66,9 @@
               </div>
 		</div>
         <div style="clear:both;"></div>
-        <div style="width:260px;">
+        <div style="width:360px;">
        			 <div >
-						<div style="font-size:12px; width:300px; float:left; text-align:right;">
+						<div style="font-size:12px; width:300px; float:left; ">
 							 Total:
 						</div>
 						<div style="font-size:12px; width:60px; float:left;">
@@ -79,7 +79,7 @@
 					</div>
 
                     <div >
-						<div style="font-size:12px; width:300px; float:left; text-align:right;">
+						<div style="font-size:12px; width:300px; float:left; ">
 							 Discount:
 						</div>
 						<div style="font-size:12px; width:60px; float:left;">
@@ -89,7 +89,7 @@
 						</div>
 					</div>
                     <div >
-						<div style="font-size:12px; width:300px; float:left; text-align:right;">
+						<div style="font-size:12px; width:300px; float:left; ">
 							 <strong>To Pay:</strong>
 						</div>
 						<div style="font-size:12px; width:60px; float:left;">
