@@ -61,7 +61,7 @@
               <div style="font-size:10px; width:50px; float:left;">
                      @{{orderitem.qty}} 		
 			  </div>
-              <div style="font-size:10px; width:50px; ">
+              <div style="font-size:10px; width:50px; float:left;">
                      @{{orderitem.price * orderitem.qty}} 
               </div>
 		</div>
