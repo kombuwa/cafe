@@ -131,8 +131,9 @@
             </div>
         </div>
 		<div class="col-md-4">
-			Agent: @{{order.agent}} <br>
+			Waiter : @{{order.agent}} <br>
 	        Table: @{{order.location}} <br>
+	        Pax: @{{order.pax}} <br>
 	        @{{order.description}} <br>
 			<accordion close-others="true">
     
