@@ -127,6 +127,7 @@ id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 agent VARCHAR(50),
 location VARCHAR(50),
 description VARCHAR(255),
+pax TINYINT,
 created_at TIMESTAMP,
 updated_at TIMESTAMP
 )engine=innodb;

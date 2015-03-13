@@ -21,13 +21,17 @@ class OrderController extends BaseController {
 		$today = date("Y-m-d H:i:s");
 		$data = array(
 			'location' => Input::get('location'),
+			'agent' => Input::get('agent'),
+			'pax' => Input::get('pax'),
 			'description' => Input::get('description'),
 		);
 		
 		//set validation rules
 		$rules = array(
 			'location' => 'required|max:50',
-			'description' => 'max:50',
+			'agent' => 'required|max:50',
+			'pax' => 'required',
+			'description' => 'max:250',
 		);
 
 
@@ -42,6 +46,7 @@ class OrderController extends BaseController {
 			$order = new OrderModel;
 			$order->agent = Input::get('agent');
 			$order->location = Input::get('location');
+			$order->pax = Input::get('pax');
 			$order->description = Input::get('description');
 
 			

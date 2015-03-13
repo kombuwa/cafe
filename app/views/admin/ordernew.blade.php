@@ -46,7 +46,14 @@
                       <option value="asiff">asiff</option>
                       <option value="nuwan">nuwan</option>
                       <option value="jayanath">jayanath</option>
-                    </select> 
+                    </select>  <br>
+                    <select id="pax" name="pax" >
+                      <option value="1" selected="selected">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>  <br>
                 </div>
                 <div class="col-xs-6 col-md-4" style="height:125px;"><button class="btn btn-default" type="submit">Place Order</button>
                     <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i>
