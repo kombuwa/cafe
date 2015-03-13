@@ -33,11 +33,11 @@
              <?php echo '<form role="form" method="post" action="'.URL::to('/order/new/').'">'; ?>
                 <div class="col-xs-12 col-md-8">
                     <select id="location" name="location" >
-                      <option value="tabel 1" selected="selected">tabel 1</option>
-                      <option value="tabel 2">tabel 2</option>
-                      <option value="tabel 3">tabel 3</option>
-                      <option value="tabel 4">tabel 4</option>
-                      <option value="tabel 5">tabel 5</option>
+                      <option value="table 1" selected="selected">table 1</option>
+                      <option value="table 2">table 2</option>
+                      <option value="table 3">table 3</option>
+                      <option value="table 4">table 4</option>
+                      <option value="table 5">table 5</option>
                     </select> <br>
                     <input class="form-control" placeholder="Description"  id="description" name="description" type="text"><br>
                     <select id="agent" name="agent" >
