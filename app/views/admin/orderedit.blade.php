@@ -77,7 +77,7 @@
 						</div>
 						<div class="col-xs-6 col-md-4 text-right">
 
-							<select ng-model="discount" >
+							<select ng-model="discount" class="form-control">
 							  <option value="0" selected="selected">None</option>
 							  <option value="5">5 %</option>
 							  <option value="10">10 %</option>
@@ -131,7 +131,7 @@
             </div>
         </div>
 		<div class="col-md-4">
-        	<div style="text-align:center;">
+        	<div style="text-align:center;"><br>
 			Waiter : @{{order.agent}} &nbsp;|&nbsp;
 	        Table: @{{order.location}} &nbsp;|&nbsp;
 	        Pax: @{{order.pax}} <br>
