@@ -44,7 +44,7 @@
         ==========================<br>
 <br>
         </div>
-        <div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif">
+        <div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif;">
             <table width="270" border="0">
               <tr>
                 <td width="150" align="left">Item</td>
@@ -60,10 +60,10 @@
             </table>
         </div>
         
-        <div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif" >
+        <div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif;" >
             ==========================<br>
         </div>
-        <div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif" class="ng-binding">
+        <div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif;" >
             <table width="270" border="0">
               <tr>
                 <td align="left">Gross Amount </td>
