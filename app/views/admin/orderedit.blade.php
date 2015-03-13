@@ -103,11 +103,26 @@
 			</div>
 			<div>
 				<a ng-href="/order/print/@{{order.id}}" class="btn btn-info">Print</a>
-			</div>
-		</div>
+                
+                <div class="btn-group">
+                  <button class="btn btn-primary" type="button">Primary</button>
+                  <button aria-expanded="false" data-toggle="dropdown" class="btn btn-primary dropdown-toggle" type="button">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <ul role="menu" class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
 		<div class="col-md-4">
 			Agent: @{{order.agent}} <br>
-	        Tabel: @{{order.location}} <br>
+	        Table: @{{order.location}} <br>
 	        @{{order.description}} <br>
 			<accordion close-others="true">
     
