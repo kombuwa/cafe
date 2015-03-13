@@ -40,7 +40,7 @@ class OrderController extends BaseController {
 		}else{
 			//create new order
 			$order = new OrderModel;
-			$order->agent = $agent;
+			$order->agent = Input::get('agent');
 			$order->location = Input::get('location');
 			$order->description = Input::get('description');
 
