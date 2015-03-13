@@ -131,10 +131,12 @@
             </div>
         </div>
 		<div class="col-md-4">
-			Waiter : @{{order.agent}} <br>
-	        Table: @{{order.location}} <br>
+        	<div style="text-align:center;">
+			Waiter : @{{order.agent}} &nbsp;|&nbsp;
+	        Table: @{{order.location}} &nbsp;|&nbsp;
 	        Pax: @{{order.pax}} <br>
 	        @{{order.description}} <br>
+            </div>
 			<accordion close-others="true">
     
 		    <accordion-group heading="@{{category.name}}" ng-repeat="category in categorys" ng-click="getFoodItem(category.id)">
