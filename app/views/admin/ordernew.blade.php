@@ -34,6 +34,13 @@
                 <div class="col-xs-12 col-md-8">
                     <input class="form-control" placeholder="Location" id="location" name="location" type="text" required><br>
                     <input class="form-control" placeholder="Description"  id="description" name="description" type="text"><br>
+                    <select id="agent" name="agent" >
+                      <option value="uma" selected="selected">uma</option>
+                      <option value="isuru">isuru</option>
+                      <option value="asiff">asiff</option>
+                      <option value="nuwan">nuwan</option>
+                      <option value="jayanath">jayanath</option>
+                    </select> 
                 </div>
                 <div class="col-xs-6 col-md-4" style="height:125px;"><button class="btn btn-default" type="submit">Place Order</button>
                     <i class="fa fa-spinner fa-spin" ng-show="isAdd"></i>
