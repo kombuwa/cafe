@@ -70,16 +70,7 @@
 
 						</div>
 					</div>
-                    <div >
-						<div class="col-xs-12 col-md-8 text-right">
-							 Tax:
-						</div>
-						<div class="col-xs-6 col-md-4 text-right">
-
-							@{{ (getTotal()/100)*20 }}
-
-						</div>
-					</div>
+                    
                     <div >
 						<div class="col-xs-12 col-md-8 text-right">
 							 Discount:
@@ -102,7 +93,7 @@
 						</div>
 						<div class="col-xs-6 col-md-4 text-right">
 
-							<strong>@{{ getTotal() + ((getTotal()/100)*20) - ((getTotal()/100)*discount)}}</strong>
+							<strong>@{{ getTotal() - ((getTotal()/100)*discount)}}</strong>
 
 						</div>
 					</div>
