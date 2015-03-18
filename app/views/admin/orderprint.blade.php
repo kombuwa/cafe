@@ -80,7 +80,15 @@
             </table>
   </div>
   
-  
+  <div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif">
+        
+        ==========================<br>
+        Thank You <br>
+        Visit us: cafeceylon.lk<br>
+        
+       
+<br>
+        </div>
         
         
 		
