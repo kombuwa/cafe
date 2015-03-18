@@ -169,3 +169,14 @@ qty TINYINT,
 created_at TIMESTAMP,
 updated_at TIMESTAMP
 )engine=innodb;
+
+/* Create invoice Table */
+DROP TABLE IF EXISTS invoice;
+CREATE TABLE invoice
+(
+id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+orid MEDIUMINT,
+invoice TEXT,
+created_at TIMESTAMP,
+updated_at TIMESTAMP
+)engine=innodb;

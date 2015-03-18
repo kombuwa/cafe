@@ -14,6 +14,7 @@
 
 	        $http.get('/api/order/details/'+searchId+'').success(function(order){
 	        	$scope.order = order;
+	        	$scope.discount = order.discount;
 	        });
 	        $http.get('/api/order/items/'+searchId+'').success(function(items){
 	        	$scope.orderitems = items;
