@@ -216,6 +216,8 @@ Route::group(array('before' => 'auth'), function(){
 	Route::get('api/orders/', 'OrderController@getorders');
 	// API to add Order Item
 	Route::post('api/order/Item/', 'OrderController@postitem');
+	// API to updte Order Discount
+	Route::post('api/order/discount/', 'OrderController@postdiscount');
 	// API to increase Order item quantity
 	Route::put('api/order/item/p/{id}', 'OrderController@pitem');
 	// API to decrease Order item quantity

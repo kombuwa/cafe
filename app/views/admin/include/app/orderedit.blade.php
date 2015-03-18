@@ -101,6 +101,11 @@
 			    return total;
 			}
 
+			$scope.change = function() {
+		    	$http.delete('/api/order/item/'+id+'/').success(function(){
+		    		
+		        });
+		    };
 	      };
 	
 	      myApp.config.push([function() {
