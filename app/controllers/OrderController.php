@@ -83,8 +83,8 @@ class OrderController extends BaseController {
     {
     	$order = OrderModel::find($id);
     	$inv = new InvoiceModel;
-    	$order->orid = $id;
-    	$order->invoice = "<h3>Cafe Ceylon</h3>
+    	$inv->orid = $id;
+    	$inv->invoice = "<h3>Cafe Ceylon</h3>
         ==========================<br>
         Matara Road Kabalana, <br>
         Ahangama, Sri Lanka.<br>
@@ -94,7 +94,7 @@ class OrderController extends BaseController {
         Waiter: umavcs | Table:2 | Pax:2<br>
         ==========================<br><br>
         </div>";
-    	$order->save();
+    	$inv->save();
     	return Redirect::to('order/print/'.$order->id)
 	}
 	
