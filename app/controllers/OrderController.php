@@ -79,6 +79,25 @@ class OrderController extends BaseController {
 		return OrderModel::all();
 	}
 
+	public function newinvoice($id)
+    {
+    	$order = OrderModel::find($id);
+    	$inv = new InvoiceModel;
+    	$order->orid = $id;
+    	$order->invoice = "<h3>Cafe Ceylon</h3>
+        ==========================<br>
+        Matara Road Kabalana, <br>
+        Ahangama, Sri Lanka.<br>
+        09 12282729<br>
+        E mail : sales@cafeceylon.lk <br>
+        ==========================<br>
+        Waiter: umavcs | Table:2 | Pax:2<br>
+        ==========================<br><br>
+        </div>";
+    	$order->save();
+    	return Redirect::to('order/print/'.$order->id)
+	}
+	
 	public function postitem()
 	{
 		return OrderitemModel::create(Input::all());
