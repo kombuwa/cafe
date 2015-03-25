@@ -98,7 +98,7 @@ Route::group(array('before' => 'auth'), function(){
 
 //  Route to the print Order page
 Route::group(array('before' => 'auth'), function(){
-	Route::post('invoice/new/{id}', 'OrderController@newinvoice');
+	Route::get('invoice/new/{id}', 'OrderController@newinvoice');
 	Route::get('order/print/{id}', 'OrderController@printOrder');
 });
 
