@@ -95,7 +95,7 @@ class OrderController extends BaseController {
         ==========================<br><br>
         </div>";
     	$inv->save();
-    	return Redirect::to('order/print/'.$order->id)
+    	return Redirect::to('order/print/'.$order->id);
 	}
 	
 	public function postitem()
