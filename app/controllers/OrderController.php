@@ -84,16 +84,32 @@ class OrderController extends BaseController {
     	$order = OrderModel::find($id);
     	$inv = new InvoiceModel;
     	$inv->orid = $id;
-    	$inv->invoice = "<h3>Cafe Ceylon</h3>
+    	$inv->invoice = '<h3>Cafe Ceylon</h3>
         ==========================<br>
         Matara Road Kabalana, <br>
         Ahangama, Sri Lanka.<br>
         09 12282729<br>
         E mail : sales@cafeceylon.lk <br>
         ==========================<br>
-        Waiter: ".$order->agent." | Table: ".$order->location." | Pax: ".$order->pax."<br>
+        Waiter: '.$order->agent.' | Table: '.$order->location.' | Pax: '.$order->pax.'<br>
         ==========================<br><br>
-        </div>";
+        <table width="270" border="0">
+              <tr>
+                <td width="150" align="left">Item</td>
+                <td width="40" align="center">Qty</td>
+                <td width="60" align="right">Amount</td>
+              </tr>';
+        $orderitems =OrderitemModel::where('orid', '=', $id)->get();
+
+        foreach ($orderitems as $orderitem) {
+        $inv->invoice .= '<tr>
+                <td align="left">'.$orderitem->item.'</td>
+                <td align="center">'.$orderitem->qty.'</td>
+                <td align="right">'.$orderitem->price * $orderitem->qty.'</td>
+              </tr>';
+        }
+
+        $inv->invoice .= '</table>';
     	$inv->save();
     	return Redirect::to('order/print/'.$order->id);
 	}
