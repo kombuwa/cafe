@@ -103,7 +103,7 @@
 			</div>
 			<div>
 				<a ng-href="/order/print/@{{order.id}}" class="btn btn-info">Print</a>
-				<a ng-href="invoice/new/@{{order.id}}" class="btn btn-info">add invoice</a>
+				<a ng-href="/invoice/new/@{{order.id}}" class="btn btn-info">add invoice</a>
                 <div class="btn-group">
                   <button class="btn btn-primary" type="button">KOT</button>
                   <button aria-expanded="false" data-toggle="dropdown" class="btn btn-primary dropdown-toggle" type="button">
