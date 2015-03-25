@@ -91,7 +91,7 @@ class OrderController extends BaseController {
         09 12282729<br>
         E mail : sales@cafeceylon.lk <br>
         ==========================<br>
-        Waiter: umavcs | Table:2 | Pax:2<br>
+        Waiter: ".$order->agent." | Table: ".$order->location." | Pax: ".$order->pax."<br>
         ==========================<br><br>
         </div>";
     	$inv->save();
