@@ -11,7 +11,7 @@
 	        	$scope.invoice = invoice;
 	        	$scope.isAdd = 0;
 	        });
-	        
+	        /*
 	        $http.get('/api/food/categorys').success(function(categorys){
 	        	$scope.categorys = categorys;
 	        });
@@ -22,7 +22,7 @@
 	        $http.get('/api/order/items/'+searchId+'').success(function(items){
 	        	$scope.orderitems = items;
 	        	$scope.isAdd = 0;
-	        });
+	        });*/
 
 	        
 	        
