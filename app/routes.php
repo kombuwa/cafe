@@ -227,4 +227,6 @@ Route::group(array('before' => 'auth'), function(){
 	Route::get('api/order/items/{id}', 'OrderController@getitems');
 	// API to delete Order Item
 	Route::delete('api/order/item/{id}', 'OrderController@deleteitem');
+	// API to get Order Items
+	Route::get('/api/invoice/{id}', 'OrderController@getinvoice');
 });

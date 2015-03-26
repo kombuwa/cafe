@@ -134,6 +134,11 @@ class OrderController extends BaseController {
     	$inv->save();
     	return Redirect::to('order/print/'.$order->id);
 	}
+
+	public function getinvoice($id)
+	{
+		 return InvoiceModel::where('orid', '=', $id)->first();
+	}
 	
 	public function postitem()
 	{
