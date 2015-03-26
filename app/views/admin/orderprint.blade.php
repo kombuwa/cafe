@@ -19,7 +19,7 @@
 	 ?>
 
      <!-- Angular -->
-    @include('admin.include.app.orderedit')
+    @include('admin.include.app.orderprint')
 
     <div id="wrapper" ng-controller="orderController">
 
