@@ -103,7 +103,7 @@ class OrderController extends BaseController {
 		$total = 0;
 
         foreach ($orderitems as $orderitem) {
-        	$total += $orderitem->price * $orderitem->qty;
+        	$total = $total+($orderitem->price * $orderitem->qty);
         $inv->invoice .= '<tr>
                 <td align="left">'.$orderitem->item.'</td>
                 <td align="center">'.$orderitem->qty.'</td>
