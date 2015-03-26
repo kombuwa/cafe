@@ -20,10 +20,10 @@
 	        	$scope.isAdd = 0;
 	        });
 
-	       /* $http.get('/api/invoice/'+searchId+'').success(function(invoice){
+	        $http.get('/api/invoice/'+searchId+'').success(function(invoice){
 	        	$scope.invoice = invoice;
 	        	$scope.isAdd = 0;
-	        });*/
+	        });
 	        
 	        $scope.getFoodItem = function(id) {
 
