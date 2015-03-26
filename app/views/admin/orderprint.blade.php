@@ -31,8 +31,8 @@
         <script type="text/javascript">
             var searchId = {{ $searchId }};
         </script>
-        
-        <div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif">
+        @{{invoice.invoice}}
+       <!-- <div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif">
         <h3>Cafe Ceylon</h3>
         ==========================<br>
         Matara Road Kabalana, <br>
@@ -88,7 +88,7 @@
         
        
 <br>
-        </div>
+        </div>-->
         
         
 		
