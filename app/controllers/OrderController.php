@@ -102,6 +102,7 @@ class OrderController extends BaseController {
         $orderitems =OrderitemModel::where('orid', '=', $id)->get();
 		$total = 0;
 
+
         foreach ($orderitems as $orderitem) {
         	$total = $total+($orderitem->price * $orderitem->qty);
         $inv->invoice .= '<tr>
@@ -110,7 +111,7 @@ class OrderController extends BaseController {
                 <td align="right">'.$orderitem->price * $orderitem->qty.'</td>
               </tr>';
         }
-
+        $net = ($total+(($total/100)*20)-(($total/100)*$orderitem->discount));
         $inv->invoice .= '</table>
         <div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif;" >
             ==========================<br>
@@ -127,9 +128,10 @@ class OrderController extends BaseController {
               </tr>
               <tr>
                 <td align="left">Net Amount </td>
-                <td align="right">'.($total+(($total/100)*20)-(($total/100)*$orderitem->discount).'</td>
+                <td align="right">'.$net.'</td>
               </tr>
             </table></div>';
+
     	$inv->save();
     	return Redirect::to('order/print/'.$order->id);
 	}
