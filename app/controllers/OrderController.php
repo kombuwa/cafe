@@ -129,8 +129,7 @@ class OrderController extends BaseController {
                 <td align="left">Net Amount </td>
                 <td align="right">'.($total+(($total/100)*20)-(($total/100)*$orderitem->discount).'</td>
               </tr>
-            </table>
- 		</div>';
+            </table></div>';
     	$inv->save();
     	return Redirect::to('order/print/'.$order->id);
 	}
