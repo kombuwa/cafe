@@ -1,5 +1,5 @@
  	<script>
-	      myApp.controllers.orderController = function($scope, $http) {
+	      myApp.controllers.orderController = function($scope, $http, $sce) {
 	        //Do Awesome Controller Stuff As Usual
 	        $scope.message = 'Order Edit!';
 	        $scope.discount = 0;
@@ -8,7 +8,7 @@
 	        	{ id:2, name :"Juice" },
 	        ];*/
 	        $http.get('/api/invoice/'+searchId+'').success(function(inv){
-	        	$scope.invoice = inv.invoice;
+	        	$scope.invoice = $sce.trustAsHtml(inv.invoice);
 	        	$scope.isAdd = 0;
 	        });
 	        /*
@@ -116,6 +116,7 @@
 	      myApp.dependencies.push('ngResource');
 	      myApp.dependencies.push('truncate');
 	      myApp.dependencies.push('xeditable');
+	      myApp.dependencies.push('ngSanitize');
 	      myApp.dependencies.push('ui.bootstrap');
 	
 	      myApp.directives.myDirective = [function() {

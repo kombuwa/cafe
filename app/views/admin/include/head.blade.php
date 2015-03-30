@@ -30,4 +30,5 @@
 	{{ HTML::script('js/truncate.js') }}
 	{{ HTML::script('js/angularBooter.js') }}
 	{{ HTML::script('js/xeditable.min.js') }}
+	{{ HTML::script('js/angular-sanitize.js') }}
 	{{ HTML::script('js/ui-bootstrap-tpls-0.11.2.min.js') }}
