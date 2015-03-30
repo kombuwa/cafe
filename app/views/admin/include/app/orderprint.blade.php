@@ -7,8 +7,8 @@
 	        	{ id:1, name :"Soup" },
 	        	{ id:2, name :"Juice" },
 	        ];*/
-	        $http.get('/api/invoice/'+searchId+'').success(function(invoice){
-	        	$scope.invoice = invoice;
+	        $http.get('/api/invoice/'+searchId+'').success(function(inv){
+	        	$scope.invoice = inv.invoice;
 	        	$scope.isAdd = 0;
 	        });
 	        /*

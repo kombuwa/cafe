@@ -32,9 +32,9 @@
             var searchId = {{ $searchId }};
         </script>
 
-        <p ng-bind-html="invoice.invoice">
+        <div ng-bind-html="invoice">
 
-       </p>
+       </div>
         
         
 		
