@@ -62,6 +62,7 @@
 			}
 
 			$scope.changeClass = function(){
+				$scope.class = "";
 	            $scope.class = "flipped";
 	        };
 	        
