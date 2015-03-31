@@ -60,6 +60,10 @@
 					$scope.quantity = 'Quantity';
 				}
 			}
+
+			$scope.changeClass = function(){
+	            $scope.class = "flipped";
+	        };
 	        
 	      };
 	
