@@ -113,7 +113,16 @@
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->
-                
+        <section class="container">
+        <div ng-class="class" id="card">
+          <figure class="front">1</figure>
+          <figure class="back">2</figure>
+        </div>
+        </section>
+
+        <section id="options">
+            <p><button ng-click="changeClass()" id="flip">Flip Card</button></p>
+        </section>
     	<!-- Content bottom -->
 	@include('admin.include.cont_bot')
     
