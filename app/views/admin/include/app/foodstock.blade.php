@@ -3,6 +3,7 @@
 	        //Do Awesome Controller Stuff As Usual
 	        $scope.message = 'Food Stock!';
 	        $scope.quantity = 'quantity';
+	        $scope.class = "flipped";
 	        /*$scope.categorys = [
 	        	{ id:1, name :"Soup" },
 	        	{ id:2, name :"Juice" },
@@ -62,8 +63,9 @@
 			}
 
 			$scope.changeClass = function(){
-				$scope.class = "";
-	            $scope.class = "flipped";
+				//$scope.class = "";
+	           // $scope.class = "flipped";
+	            $scope.class = !$scope.class;
 	        };
 	        
 	      };
