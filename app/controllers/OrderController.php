@@ -92,6 +92,8 @@ class OrderController extends BaseController {
         Ahangama, Sri Lanka.<br>
         09 12282729<br>
         E mail : sales@cafeceylon.lk <br>
+		==========================<br>
+        date | invoice no <br>
         ==========================<br>
         Waiter: '.$order->agent.' | Table: '.$order->location.' | Pax: '.$order->pax.'<br>
         ==========================<br><br>
