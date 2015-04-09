@@ -84,7 +84,9 @@ class OrderController extends BaseController {
     	$order = OrderModel::find($id);
     	$inv = new InvoiceModel;
     	$inv->orid = $id;
-    	$inv->invoice = '<h3>Cafe Ceylon</h3>
+    	$inv->invoice = '
+    	<div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif;" >
+    	<h3>Cafe Ceylon</h3>
         ==========================<br>
         Matara Road Kabalana, <br>
         Ahangama, Sri Lanka.<br>
@@ -93,6 +95,7 @@ class OrderController extends BaseController {
         ==========================<br>
         Waiter: '.$order->agent.' | Table: '.$order->location.' | Pax: '.$order->pax.'<br>
         ==========================<br><br>
+        </div>
         <table width="270" border="0">
               <tr>
                 <td width="150" align="left">Item</td>
@@ -130,7 +133,14 @@ class OrderController extends BaseController {
                 <td align="left">Net Amount </td>
                 <td align="right">'.$net.'</td>
               </tr>
-            </table></div>';
+            </table></div>
+            <div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif">
+        
+	        ==========================<br>
+	        Thank You <br>
+	        Visit us: cafeceylon.lk<br>
+        	<br>
+        	</div>';
 
     	$inv->save();
     	return Redirect::to('order/print/'.$order->id);
