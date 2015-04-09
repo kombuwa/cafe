@@ -81,6 +81,7 @@ class OrderController extends BaseController {
 
 	public function newinvoice($id)
     {
+    	$today = date("Y-m-d H:i:s");
     	$order = OrderModel::find($id);
     	$inv = new InvoiceModel;
     	$inv->orid = $id;
@@ -93,7 +94,7 @@ class OrderController extends BaseController {
         09 12282729<br>
         E mail : sales@cafeceylon.lk <br>
 		==========================<br>
-        date | invoice no <br>
+        '.$today.' | '.$order->id.' <br>
         ==========================<br>
         Waiter: '.$order->agent.' | Table: '.$order->location.' | Pax: '.$order->pax.'<br>
         ==========================<br><br>
