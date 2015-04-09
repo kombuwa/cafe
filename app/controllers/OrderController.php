@@ -99,6 +99,7 @@ class OrderController extends BaseController {
         Waiter: '.$order->agent.' | Table: '.$order->location.' | Pax: '.$order->pax.'<br>
         ==========================<br><br>
         </div>
+        <div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif;" >
         <table width="270" border="0">
               <tr>
                 <td width="150" align="left">Item</td>
@@ -114,11 +115,12 @@ class OrderController extends BaseController {
         $inv->invoice .= '<tr>
                 <td align="left">'.$orderitem->item.'</td>
                 <td align="center">'.$orderitem->qty.'</td>
-                <td align="right">'.$orderitem->price * $orderitem->qty.'</td>
+                <td align="right">'.money_format('%i', $orderitem->price * $orderitem->qty).'</td>
               </tr>';
         }
         $net = ($total+(($total/100)*20)-(($total/100)*$orderitem->discount));
         $inv->invoice .= '</table>
+        </div>
         <div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif;" >
             ==========================<br>
         </div>
@@ -126,7 +128,7 @@ class OrderController extends BaseController {
             <table width="270" border="0">
               <tr>
                 <td align="left">Gross Amount </td>
-                <td align="right">'.$total.'</td>
+                <td align="right">'.money_format('%i', $total).'</td>
               </tr>
               <tr>
                 <td align="left">Discounts</td>
@@ -134,7 +136,7 @@ class OrderController extends BaseController {
               </tr>
               <tr>
                 <td align="left">Net Amount </td>
-                <td align="right">'.$net.'</td>
+                <td align="right">'.money_format('%i', $net).'</td>
               </tr>
             </table></div>
             <div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif">
