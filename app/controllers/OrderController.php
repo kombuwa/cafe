@@ -99,14 +99,14 @@ class OrderController extends BaseController {
         Waiter: '.$order->agent.' | Table: '.$order->location.' | Pax: '.$order->pax.'<br>
         ==========================<br><br>
         </div>
-        <div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif;" >
+        <div style="width:270px; text-align:center; font-size:11px; font-family:Verdana, Geneva, sans-serif;" >
         <table width="270" border="0">
               <tr>
-              	<td width="150" align="left">#</td>
-                <td width="150" align="left">Item</td>
-                <td width="40" align="center">Rate</td>
-                <td width="40" align="center">Qty</td>
-                <td width="60" align="right">Amount</td>
+              	<td width="20" align="left">#</td>
+                <td width="160" align="left">Item</td>
+                <td width="30" align="center">Rate</td>
+                <td width="25" align="center">Qty</td>
+                <td width="35" align="right">Amount</td>
               </tr>';
         $orderitems =OrderitemModel::where('orid', '=', $id)->get();
 		$total = 0;
