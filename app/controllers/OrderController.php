@@ -94,7 +94,7 @@ class OrderController extends BaseController {
         09 12282729<br>
         E mail : sales@cafeceylon.lk <br>
 		==========================<br>
-        '.$today.' | '.$order->id.' <br>
+        '.$today.' | No: '.$order->id.' <br>
         ==========================<br>
         Waiter: '.$order->agent.' | Table: '.$order->location.' | Pax: '.$order->pax.'<br>
         ==========================<br><br>
@@ -102,7 +102,9 @@ class OrderController extends BaseController {
         <div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif;" >
         <table width="270" border="0">
               <tr>
+              	<td width="150" align="left">#</td>
                 <td width="150" align="left">Item</td>
+                <td width="40" align="center">Rate</td>
                 <td width="40" align="center">Qty</td>
                 <td width="60" align="right">Amount</td>
               </tr>';
@@ -113,7 +115,9 @@ class OrderController extends BaseController {
         foreach ($orderitems as $orderitem) {
         	$total = $total+($orderitem->price * $orderitem->qty);
         $inv->invoice .= '<tr>
+        		<td align="left">'.$orderitem->fiid.'</td>
                 <td align="left">'.$orderitem->item.'</td>
+                <td align="center">'.money_format('%i', $orderitem->price).'</td>
                 <td align="center">'.$orderitem->qty.'</td>
                 <td align="right">'.money_format('%i', $orderitem->price * $orderitem->qty).'</td>
               </tr>';
