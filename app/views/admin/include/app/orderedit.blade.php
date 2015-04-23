@@ -101,10 +101,14 @@
 			    return total;
 			}
 
-			$scope.change = function() {
-		    	$http.delete('/api/order/item/'+id+'/').success(function(){
-		    		
-		        });
+			$scope.change = function(id) {
+				var item = {
+	        		id : id,
+	        		discount : $scope.discount,
+	        	};
+
+		    	$http.post('/api/order/discount/', item).success(function(){
+		    	});
 		    };
 	      };
 	

@@ -46,10 +46,4 @@ class OrderitemModel extends Eloquent {
 		return $item->price;
 		}
 	}
-
-	public function money($amount, $symbol = '$')
-	{
-		return $symbol . money_format('%i', $amount);
-	}
-
 }

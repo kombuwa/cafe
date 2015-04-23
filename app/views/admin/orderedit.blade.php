@@ -77,7 +77,7 @@
 						</div>
 						<div class="col-xs-6 col-md-4 text-right">
 
-							<select ng-model="discount" ng-change="change()" class="form-control">
+							<select ng-model="discount" ng-change="change(order.id)" class="form-control">
 							  <option value="0" selected="selected">None</option>
 							  <option value="5">5 %</option>
 							  <option value="10">10 %</option>
