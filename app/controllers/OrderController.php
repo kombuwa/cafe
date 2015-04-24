@@ -166,7 +166,7 @@ class OrderController extends BaseController {
 		return OrderitemModel::create(Input::all());
 	}
 
-	public function postdiscount()
+	public function getdiscount()
 	{
 
 		$order = OrderModel::find(Input::get('id'));

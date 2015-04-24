@@ -107,7 +107,7 @@
 	        		discount : $scope.discount,
 	        	};*/
 
-		    	$http.post('/api/order/discount/?id='+id+'&discount='+$scope.discount).success(function(){
+		    	$http.get('/api/order/discount/?id='+id+'&discount='+$scope.discount).success(function(){
 		    	});
 		    };
 	      };
