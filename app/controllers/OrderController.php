@@ -122,7 +122,8 @@ class OrderController extends BaseController {
                 <td align="right">'.money_format('%i', $orderitem->price * $orderitem->qty).'</td>
               </tr>';
         }
-        $net = ($total+(($total/100)*20)-(($total/100)*$orderitem->discount));
+        $dis = ($total/100)*$orderitem->discount;
+        $net = ($total-(($total/100)*$orderitem->discount));
         $inv->invoice .= '</table>
         </div>
         <div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif;" >
@@ -135,8 +136,8 @@ class OrderController extends BaseController {
                 <td align="right">'.money_format('%i', $total).'</td>
               </tr>
               <tr>
-                <td align="left">Discounts</td>
-                <td align="right">'.$orderitem->discount.'</td>
+                <td align="left">Discounts'.$orderitem->discount.'</td>
+                <td align="right">'.money_format('%i', $dis).'</td>
               </tr>
               <tr>
                 <td align="left">Net Amount </td>
