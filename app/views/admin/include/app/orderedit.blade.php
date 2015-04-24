@@ -102,12 +102,12 @@
 			}
 
 			$scope.change = function(id) {
-				var item = {
+				/*var item = {
 	        		id : id,
 	        		discount : $scope.discount,
-	        	};
+	        	};*/
 
-		    	$http.post('/api/order/discount/', item).success(function(){
+		    	$http.post('/api/order/discount/?id='+id+'&discount='+$scope.discount).success(function(){
 		    	});
 		    };
 	      };
