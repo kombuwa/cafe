@@ -9,7 +9,7 @@ class OrderitemModel extends Eloquent {
 	 * @var string
 	 */
 	protected $table = 'orderitem';
-	protected $appends = array('item', 'price');
+	protected $appends = array('item', 'discount', 'price');
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -44,6 +44,16 @@ class OrderitemModel extends Eloquent {
 		}else{
 		$item = FooditemModel::find($this->fiid);
 		return $item->price;
+		}
+	}
+
+	public function getDiscountAttribute()
+	{
+		if($this->orid==0){
+		return '-';
+		}else{
+		$item = OrderModel::find($this->orid);
+		return $item->discount;
 		}
 	}
 
