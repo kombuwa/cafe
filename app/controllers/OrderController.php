@@ -136,7 +136,7 @@ class OrderController extends BaseController {
                 <td align="right">'.money_format('%i', $total).'</td>
               </tr>
               <tr>
-                <td align="left">Discounts'.$orderitem->discount.'</td>
+                <td align="left">Discounts '.$orderitem->discount.'%</td>
                 <td align="right">'.money_format('%i', $dis).'</td>
               </tr>
               <tr>
