@@ -102,7 +102,12 @@ Route::group(array('before' => 'auth'), function(){
 	Route::get('order/print/{id}', 'OrderController@printOrder');
 });
 
-
+//  Route to the print Order Request
+Route::group(array('before' => 'auth'), function(){
+	Route::get('kot/full/{id}', 'OrderController@fullKot');
+	//Route::get('kot/updated/{id}', 'OrderController@updatedKot');
+	Route::get('kot/print/{id}', 'OrderController@printKot');
+});
 /////////////////////////
 /*-- PRE AUTH ROUTS --*/
 ///////////////////////

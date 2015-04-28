@@ -215,4 +215,24 @@ class OrderController extends BaseController {
 		}
 		return Response::json(['success'=>true]);
 	}
+
+	public function fullKot($id)
+    {
+    	$today = date("Y-m-d H:i:s");
+    	$order = OrderModel::find($id);
+    	$kot = new OrderrequestModel;
+    	$kot->orid = $id;
+    	$kot->location = $order->location;
+    	$kot->provider = "Kitchen";
+    	$kot->token = "";
+    	$kot->type = "full";
+    	$kot->save();
+    	return Redirect::to('kot/print/'.$order->id);
+    }
+
+    public function printKot($id)
+    {
+        return View::make('admin.orderprint')->with('searchId', $id)->with('title','Print KOT');
+    }
+
 }

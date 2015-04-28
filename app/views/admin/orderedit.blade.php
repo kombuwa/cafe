@@ -111,9 +111,11 @@
                     <span class="sr-only">Toggle Dropdown</span>
                   </button>
                   <ul role="menu" class="dropdown-menu">
-                    <li><a href="#">Full</a></li>
+                    <li><a ng-href="/kot/full/@{{order.id}}">Full</a></li>
                     <li class="divider"></li>
-                    <li><a href="#">Updated</a></li>
+                    <li><a href="/kot/updated/@{{order.id}}">Updated</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/kot/print/@{{order.id}}">Previous</a></li>
                   </ul>
                 </div>
                 <div class="btn-group">
@@ -123,9 +125,11 @@
                     <span class="sr-only">Toggle Dropdown</span>
                   </button>
                   <ul role="menu" class="dropdown-menu">
-                    <li><a href="#">Full</a></li>
+                    <li><a ng-href="/bot/full/@{{order.id}}">Full</a></li>
                     <li class="divider"></li>
-                    <li><a href="#">Updated</a></li>
+                    <li><a href="/bot/updated/@{{order.id}}">Updated</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/bot/print/@{{order.id}}">Previous</a></li>
                   </ul>
                 </div>
             </div>
