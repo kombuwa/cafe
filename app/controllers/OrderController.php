@@ -224,7 +224,10 @@ class OrderController extends BaseController {
     	$kot->orid = $id;
     	$kot->location = $order->location;
     	$kot->provider = "Kitchen";
-    	$kot->token = "";
+    	$kot->token = '
+    	<div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif;" >
+    	<h3>Cafe Ceylon</h3>
+    	</div>';
     	$kot->type = "full";
     	$kot->save();
     	return Redirect::to('kot/print/'.$order->id);
