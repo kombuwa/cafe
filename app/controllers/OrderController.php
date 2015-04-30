@@ -226,8 +226,30 @@ class OrderController extends BaseController {
     	$kot->provider = "Kitchen";
     	$kot->token = '
     	<div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif;" >
-    	<h3>Cafe Ceylon</h3>
-    	</div>';
+    	<h3>Cafe Ceylon - KOT</h3>
+    	</div>
+    	<table width="270" border="0">
+              <tr>
+              	<td width="20" align="left">#</td>
+                <td width="160" align="left">Item</td>
+                <td width="30" align="center">Provider</td>
+                <td width="25" align="center">Qty</td>
+              </tr>
+    	';
+    	$orderitems =OrderitemModel::where('orid', '=', $id)->get();
+		$total = 0;
+
+
+        foreach ($orderitems as $orderitem) {
+        	//$total = $total+($orderitem->price * $orderitem->qty);
+        $kot->token .= '<tr>
+        		<td align="left">'.$orderitem->fiid.'</td>
+                <td align="left">'.$orderitem->item.'</td>
+                <td align="center">'.$orderitem->item.'</td>
+                <td align="center">'.$orderitem->qty.'</td>
+
+              </tr>';
+        }
     	$kot->type = "full";
     	$kot->save();
     	return Redirect::to('kot/print/'.$order->id);

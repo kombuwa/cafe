@@ -9,7 +9,7 @@ class OrderitemModel extends Eloquent {
 	 * @var string
 	 */
 	protected $table = 'orderitem';
-	protected $appends = array('item', 'discount', 'price');
+	protected $appends = array('item', 'provider', 'discount', 'price');
 
 	/**
 	 * The attributes excluded from the model's JSON form.
