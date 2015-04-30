@@ -262,4 +262,50 @@ class OrderController extends BaseController {
         return View::make('admin.orderprint')->with('searchId', $id)->with('title','Print KOT');
     }
 
+    public function fullBot($id)
+    {
+    	$today = date("Y-m-d H:i:s");
+    	$order = OrderModel::find($id);
+    	$kot = new OrderrequestModel;
+    	$kot->orid = $id;
+    	$kot->location = $order->location;
+    	$kot->provider = "bar";
+    	$kot->token = '
+    	<div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif;" >
+    	<h3>Cafe Ceylon - BOT</h3>
+    	</div>
+    	<table width="270" border="0">
+              <tr>
+              	<td width="20" align="left">#</td>
+                <td width="160" align="left">Item</td>
+                <td width="30" align="center">Provider</td>
+                <td width="25" align="center">Qty</td>
+              </tr>
+    	';
+    	$orderitems =OrderitemModel::where('orid', '=', $id)->get();
+		$total = 0;
+
+
+        foreach ($orderitems as $orderitem) {
+        	//$total = $total+($orderitem->price * $orderitem->qty);
+        	if($orderitem->provider=="bar"){
+        $kot->token .= '<tr>
+        		<td align="left">'.$orderitem->fiid.'</td>
+                <td align="left">'.$orderitem->item.'</td>
+                <td align="center">'.$orderitem->provider.'</td>
+                <td align="center">'.$orderitem->qty.'</td>
+
+              </tr>';
+          	}
+        }
+    	$kot->type = "full";
+    	$kot->save();
+    	return Redirect::to('bot/print/'.$order->id);
+    }
+
+    public function printBot($id)
+    {
+        return View::make('admin.orderprint')->with('searchId', $id)->with('title','Print KOT');
+    }
+
 }

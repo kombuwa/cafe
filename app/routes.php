@@ -107,6 +107,9 @@ Route::group(array('before' => 'auth'), function(){
 	Route::get('kot/full/{id}', 'OrderController@fullKot');
 	//Route::get('kot/updated/{id}', 'OrderController@updatedKot');
 	Route::get('kot/print/{id}', 'OrderController@printKot');
+	Route::get('bot/full/{id}', 'OrderController@fullBot');
+	//Route::get('bot/updated/{id}', 'OrderController@updatedBot');
+	Route::get('bot/print/{id}', 'OrderController@printBot');
 });
 /////////////////////////
 /*-- PRE AUTH ROUTS --*/
