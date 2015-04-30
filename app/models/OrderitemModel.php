@@ -57,6 +57,15 @@ class OrderitemModel extends Eloquent {
 		}
 	}
 
+	public function getProviderAttribute()
+	{
+		if($this->fiid==0){
+		return '-';
+		}else{
+		$item = FooditemModel::find($this->fiid);
+		return $item->provider;
+		}
+	
 	public function money($amount, $symbol = '$')
 	{
 		return $symbol . money_format('%i', $amount);

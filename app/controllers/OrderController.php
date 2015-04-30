@@ -245,7 +245,7 @@ class OrderController extends BaseController {
         $kot->token .= '<tr>
         		<td align="left">'.$orderitem->fiid.'</td>
                 <td align="left">'.$orderitem->item.'</td>
-                <td align="center">'.$orderitem->item.'</td>
+                <td align="center">'.$orderitem->provider.'</td>
                 <td align="center">'.$orderitem->qty.'</td>
 
               </tr>';
