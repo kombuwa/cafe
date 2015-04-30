@@ -161,6 +161,11 @@ class OrderController extends BaseController {
 	{
 		 return InvoiceModel::where('orid', '=', $id)->first();
 	}
+
+	public function getkot($id)
+	{
+		 return OrderrequestModel::where('orid', '=', $id)->first();
+	}
 	
 	public function postitem()
 	{
@@ -259,7 +264,7 @@ class OrderController extends BaseController {
 
     public function printKot($id)
     {
-        return View::make('admin.orderprint')->with('searchId', $id)->with('title','Print KOT');
+        return View::make('admin.kotprint')->with('searchId', $id)->with('title','Print KOT');
     }
 
     public function fullBot($id)
