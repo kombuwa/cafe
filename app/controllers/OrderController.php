@@ -223,7 +223,7 @@ class OrderController extends BaseController {
     	$kot = new OrderrequestModel;
     	$kot->orid = $id;
     	$kot->location = $order->location;
-    	$kot->provider = "Kitchen";
+    	$kot->provider = "kitchen";
     	$kot->token = '
     	<div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif;" >
     	<h3>Cafe Ceylon - KOT</h3>
@@ -242,6 +242,7 @@ class OrderController extends BaseController {
 
         foreach ($orderitems as $orderitem) {
         	//$total = $total+($orderitem->price * $orderitem->qty);
+        	if($orderitem->provider=="kitchen"){
         $kot->token .= '<tr>
         		<td align="left">'.$orderitem->fiid.'</td>
                 <td align="left">'.$orderitem->item.'</td>
@@ -249,6 +250,7 @@ class OrderController extends BaseController {
                 <td align="center">'.$orderitem->qty.'</td>
 
               </tr>';
+          	}
         }
     	$kot->type = "full";
     	$kot->save();
