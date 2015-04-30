@@ -65,6 +65,7 @@ class OrderitemModel extends Eloquent {
 		$item = FooditemModel::find($this->fiid);
 		return $item->provider;
 		}
+	}	
 	
 	public function money($amount, $symbol = '$')
 	{
