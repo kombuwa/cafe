@@ -314,6 +314,7 @@ class OrderController extends BaseController {
               </tr>';
           	}
         }
+        $kot->token .= '</table>';
     	$kot->type = "full";
     	$kot->save();
     	return Redirect::to('bot/print/'.$order->id);
