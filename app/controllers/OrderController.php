@@ -232,6 +232,11 @@ class OrderController extends BaseController {
     	$kot->token = '
     	<div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif;" >
     	<h3>Cafe Ceylon - KOT</h3>
+    	==========================<br>
+        '.$today.' | No: '.$order->id.' <br>
+        ==========================<br>
+        Waiter: '.$order->agent.' | Table: '.$order->location.' | Pax: '.$order->pax.'<br>
+        ==========================<br><br>
     	</div>
     	<table width="270" border="0">
               <tr>
@@ -257,6 +262,7 @@ class OrderController extends BaseController {
               </tr>';
           	}
         }
+        $kot->token .= '</table>';
     	$kot->type = "full";
     	$kot->save();
     	return Redirect::to('kot/print/'.$order->id);
@@ -278,6 +284,11 @@ class OrderController extends BaseController {
     	$kot->token = '
     	<div style="width:270px; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif;" >
     	<h3>Cafe Ceylon - BOT</h3>
+    	==========================<br>
+        '.$today.' | No: '.$order->id.' <br>
+        ==========================<br>
+        Waiter: '.$order->agent.' | Table: '.$order->location.' | Pax: '.$order->pax.'<br>
+        ==========================<br><br>
     	</div>
     	<table width="270" border="0">
               <tr>
