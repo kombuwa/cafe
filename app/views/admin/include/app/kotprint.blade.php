@@ -8,7 +8,7 @@
 	        	{ id:2, name :"Juice" },
 	        ];*/
 	        $http.get('/api/kot/'+searchId+'').success(function(inv){
-	        	$scope.invoice = $sce.trustAsHtml(inv.invoice);
+	        	$scope.invoice = $sce.trustAsHtml(inv.token);
 	        	$scope.isAdd = 0;
 	        });
 	        /*
