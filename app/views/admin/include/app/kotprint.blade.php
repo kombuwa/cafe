@@ -7,7 +7,7 @@
 	        	{ id:1, name :"Soup" },
 	        	{ id:2, name :"Juice" },
 	        ];*/
-	        $http.get('/api/invoice/'+searchId+'').success(function(inv){
+	        $http.get('/api/kot/'+searchId+'').success(function(inv){
 	        	$scope.invoice = $sce.trustAsHtml(inv.invoice);
 	        	$scope.isAdd = 0;
 	        });

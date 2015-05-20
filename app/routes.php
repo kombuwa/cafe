@@ -239,4 +239,6 @@ Route::group(array('before' => 'auth'), function(){
 	Route::get('/api/invoice/{id}', 'OrderController@getinvoice');
 	// API to get kot 
 	Route::get('/api/kot/{id}', 'OrderController@getkot');
+	// API to get bot 
+	Route::get('/api/bot/{id}', 'OrderController@getbot');
 });

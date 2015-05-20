@@ -164,7 +164,12 @@ class OrderController extends BaseController {
 
 	public function getkot($id)
 	{
-		 return OrderrequestModel::where('orid', '=', $id)->first();
+		 return OrderrequestModel::where('orid', '=', $id)->where('provider', '=', 'kitchen')->orderBy('created_at', 'desc')->first();
+	}
+
+	public function getbot($id)
+	{
+		 return OrderrequestModel::where('orid', '=', $id)->where('provider', '=', 'bar')->orderBy('created_at', 'desc')->first();
 	}
 	
 	public function postitem()
@@ -322,7 +327,7 @@ class OrderController extends BaseController {
 
     public function printBot($id)
     {
-        return View::make('admin.orderprint')->with('searchId', $id)->with('title','Print KOT');
+        return View::make('admin.botprint')->with('searchId', $id)->with('title','Print BOT');
     }
 
 }
